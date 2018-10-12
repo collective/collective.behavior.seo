@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="collective.behavior.seo"
+      interface="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+      />
+</layers>
