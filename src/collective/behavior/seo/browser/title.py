@@ -11,13 +11,10 @@ from ..interfaces import ISEOFieldsMarker
 class TitleViewlet(common.TitleViewlet):
     """Override the default Plone viewlet"""
 
-    @property
-    def page_title(self):
+    def update(self):
+        super(TitleViewlet,self).update()
 
         if ISEOFieldsMarker.providedBy(self.context):
-
             if self.context.seo_title:
-                return escape(safe_unicode(self.context.seo_title))
-
-        return super(TitleViewlet,self).page_title
+                self.site_title = escape(safe_unicode(self.context.seo_title))
         

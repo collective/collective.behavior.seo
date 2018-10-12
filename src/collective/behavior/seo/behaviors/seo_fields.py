@@ -26,16 +26,16 @@ class ISEOFields(model.Schema):
         )
 
     seo_title=schema.TextLine(
-        title=u"SEO Title",
-        description=_(u"This field is used in the web page <head> section "
-                      u"title instead of the title on the main tab."),
+        title=_(u"SEO Title"),
+        description=_(u"Used in the web page <head> section title and "
+                      u"browser tab instead of the default title."),
         required=False
         )
 
     seo_description=schema.Text(
-        title=u"SEO Description",
-        description=_(u"This field is used as meta description field in <head> section and browser "
-                      u"tab instead of the description on the main tab."),
+        title=_(u"SEO Description"),
+        description=_(u"Used as meta description field in the <head> "
+                      u"section of a page instead of the default description."),
         required=False
         )
 

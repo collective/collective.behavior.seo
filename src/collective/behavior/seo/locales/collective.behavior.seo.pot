@@ -1,0 +1,54 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-10-12 14:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.behavior.seo\n"
+
+#: ../configure.zcml:27
+msgid "Installs the collective.behavior.seo add-on."
+msgstr ""
+
+#: ../behaviors/seo_fields.py:21
+msgid "SEO"
+msgstr ""
+
+#: ../behaviors/seo_fields.py:36
+msgid "SEO Description"
+msgstr ""
+
+#: ../behaviors/seo_fields.py:29
+msgid "SEO Title"
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "Uninstalls the collective.behavior.seo add-on."
+msgstr ""
+
+#: ../behaviors/seo_fields.py:37
+msgid "Used as meta description field in the <head> section of a page instead of the default description."
+msgstr ""
+
+#: ../behaviors/seo_fields.py:30
+msgid "Used in the web page <head> section title and browser tab instead of the default title."
+msgstr ""
+
+#: ../configure.zcml:27
+msgid "collective.behavior.seo"
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "collective.behavior.seo (uninstall)"
+msgstr ""

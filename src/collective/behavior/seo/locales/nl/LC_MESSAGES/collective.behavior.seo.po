@@ -20,15 +20,15 @@ msgstr ""
 
 #: ../behaviors/seo_fields.py:21
 msgid "SEO"
-msgstr ""
+msgstr "SEO"
 
 #: ../behaviors/seo_fields.py:36
 msgid "SEO Description"
-msgstr ""
+msgstr "SEO Omschrijving"
 
 #: ../behaviors/seo_fields.py:29
 msgid "SEO Title"
-msgstr ""
+msgstr "SEO Titel"
 
 #: ../configure.zcml:36
 msgid "Uninstalls the collective.behavior.seo add-on."
@@ -36,11 +36,11 @@ msgstr ""
 
 #: ../behaviors/seo_fields.py:37
 msgid "Used as meta description field in the <head> section of a page instead of the default description."
-msgstr ""
+msgstr "Gebruikt als meta 'description' veld in de <head sectie van een pagina in plaats van de standaad omschrijving."
 
 #: ../behaviors/seo_fields.py:30
 msgid "Used in the web page <head> section title and browser tab instead of the default title."
-msgstr ""
+msgstr "Gebruikt in de <head> sectie van de pagina en op de browser tab in plaats van de standaard titel."
 
 #: ../configure.zcml:27
 msgid "collective.behavior.seo"
