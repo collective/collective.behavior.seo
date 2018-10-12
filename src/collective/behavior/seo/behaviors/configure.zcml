@@ -11,11 +11,11 @@
 
     <plone:behavior
         name="collective.behavior.seo.seo_fields"
-        title="SeoFields"
+        title="SEO Fields"
         description="This behavior adds extra fields to a Content Type for SEO optimisation"
-        provides=".seo_fields.ISeoFields"
-        factory=".seo_fields.SeoFields"
-        marker=".seo_fields.ISeoFields"
+        provides=".seo_fields.ISEOFields"
+        factory=".seo_fields.SEOFields"
+        marker="..interfaces.ISEOFieldsMarker"
         />
 
         
