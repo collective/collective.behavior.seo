@@ -5,7 +5,8 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix implementer decorator on SEOFields behavior in python. The zcml registration was correct and seems to override. [fredvd]
+
 
 
 1.0a1 (2018-10-12)

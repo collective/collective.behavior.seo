@@ -8,9 +8,7 @@ from plone.supermodel import model
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import provider
-from plone.autoform import directives
 
-from ..interfaces import ISEOFieldsMarker
 
 @provider(IFormFieldProvider)
 class ISEOFields(model.Schema):
@@ -39,7 +37,7 @@ class ISEOFields(model.Schema):
         required=False
         )
 
-@implementer(ISEOFieldsMarker)
+@implementer(ISEOFields)
 @adapter(IDexterityContent)
 class SEOFields(object):
     def __init__(self, context):
