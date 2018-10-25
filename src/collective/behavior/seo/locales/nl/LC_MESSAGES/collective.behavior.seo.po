@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-10-12 14:20+0000\n"
+"POT-Creation-Date: 2018-10-25 11:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,31 +14,43 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: ../behaviors/seofields.py:53
+msgid "Available options"
+msgstr "Beschikbare opties"
+
 #: ../configure.zcml:27
 msgid "Installs the collective.behavior.seo add-on."
 msgstr ""
 
-#: ../behaviors/seo_fields.py:21
+#: ../behaviors/seofields.py:49
+msgid "Metatag Robots"
+msgstr "Metatag Robots"
+
+#: ../behaviors/seofields.py:23
 msgid "SEO"
 msgstr "SEO"
 
-#: ../behaviors/seo_fields.py:36
+#: ../behaviors/seofields.py:39
 msgid "SEO Description"
 msgstr "SEO Omschrijving"
 
-#: ../behaviors/seo_fields.py:29
+#: ../behaviors/seofields.py:32
 msgid "SEO Title"
 msgstr "SEO Titel"
+
+#: ../behaviors/seofields.py:50
+msgid "Select options that hint search engines how to treat this content."
+msgstr "Kies opties die zoekmachines oppikken voor het gebruik van deze inhoud."
 
 #: ../configure.zcml:36
 msgid "Uninstalls the collective.behavior.seo add-on."
 msgstr ""
 
-#: ../behaviors/seo_fields.py:37
+#: ../behaviors/seofields.py:40
 msgid "Used as meta description field in the <head> section of a page instead of the default description."
 msgstr "Gebruikt als meta 'description' veld in de <head sectie van een pagina in plaats van de standaad omschrijving."
 
-#: ../behaviors/seo_fields.py:30
+#: ../behaviors/seofields.py:33
 msgid "Used in the web page <head> section title and browser tab instead of the default title."
 msgstr "Gebruikt in de <head> sectie van de pagina en op de browser tab in plaats van de standaard titel."
 

@@ -47,7 +47,8 @@ class ISEOFields(model.Schema):
                 vocabulary = "seofields.robots")
     seo_robots = schema.Tuple(
         title=_(u'Metatag Robots'),
-        description=_(u'Select the options to be added to the robots metatag.'),
+        description=_(u'Select options that hint search engines how '
+                      u'to treat this content.'),
         value_type=schema.Choice(
             title=_(u'Available options'),
             vocabulary="seofields.robots"
