@@ -5,8 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Fix implementer decorator on SEOFields behavior in python. The zcml registration was correct and seems to override. [fredvd]
+- Incorporate metarobots based on sc.seo package as extra SEO field. Use AjaxMultiSelectField for easy entry. [fredvd]
 
+- Fix implementer decorator on SEOFields behavior in python. The zcml registration was correct though. [fredvd]
 
 
 1.0a1 (2018-10-12)

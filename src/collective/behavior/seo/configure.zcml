@@ -40,9 +40,13 @@
       name="collective.behavior.seo-hiddenprofiles"
       />
 
-  <!-- -*- extra stuff goes here -*- -->
+  <include package=".behaviors" />
 
-    <include package=".behaviors" />
+  <utility
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      component=".vocabularies.RobotsVocabularyFactory"
+      name="seofields.robots"
+      />
 
         
 </configure>

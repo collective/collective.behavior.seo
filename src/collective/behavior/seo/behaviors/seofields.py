@@ -8,6 +8,10 @@ from plone.supermodel import model
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import provider
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
+from plone.autoform import directives as form
+from plone.app.z3cform.widget import AjaxSelectFieldWidget
 
 
 @provider(IFormFieldProvider)
@@ -19,7 +23,8 @@ class ISEOFields(model.Schema):
             label=_(u'SEO'),
             fields=(
                 'seo_title',
-                'seo_description'
+                'seo_description',
+                'seo_robots'
             ),
         )
 
@@ -36,6 +41,19 @@ class ISEOFields(model.Schema):
                       u"section of a page instead of the default description."),
         required=False
         )
+
+    form.widget('seo_robots',
+                AjaxSelectFieldWidget,
+                vocabulary = "seofields.robots")
+    seo_robots = schema.Tuple(
+        title=_(u'Metatag Robots'),
+        description=_(u'Select the options to be added to the robots metatag.'),
+        value_type=schema.Choice(
+            title=_(u'Available options'),
+            vocabulary="seofields.robots"
+        ),
+        required=False
+    )
 
 @implementer(ISEOFields)
 @adapter(IDexterityContent)
@@ -62,3 +80,13 @@ class SEOFields(object):
     @seo_description.setter
     def seo_description(self, value):
         self.context.seo_description = value
+
+    @property
+    def seo_robots(self):
+        if hasattr(self.context, 'seo_robots'):
+            return self.context.seo_robots
+        return None
+
+    @seo_robots.setter
+    def seo_robots(self, value):
+        self.context.seo_robots = value

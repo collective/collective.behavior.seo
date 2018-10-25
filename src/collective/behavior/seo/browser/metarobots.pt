@@ -1,0 +1,3 @@
+<metal:robots tal:condition="view/available">
+    <meta name="robots" tal:attributes="content view/content" />
+</metal:robots>
