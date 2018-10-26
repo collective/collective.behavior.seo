@@ -5,7 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Incorporate metarobots based on sc.seo package as extra SEO field. Use AjaxMultiSelectField for easy entry. [fredvd]
+- Don't generate robots vocabulary on every request. [fredvd, mauritsvanrees]
+
+- Add meta robots as extra SEO field, based on sc.seo package. Use AjaxMultiSelectField for easy entry. [fredvd]
 
 - Fix implementer decorator on SEOFields behavior in python. The zcml registration was correct though. [fredvd]
 
