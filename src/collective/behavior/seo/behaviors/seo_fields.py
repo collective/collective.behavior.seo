@@ -42,17 +42,11 @@ class ISEOFields(model.Schema):
         required=False
         )
 
-    form.widget('seo_robots',
-                AjaxSelectFieldWidget,
-                vocabulary = "seofields.robots")
-    seo_robots = schema.Tuple(
+    seo_robots = schema.Choice(
         title=_(u'Metatag Robots'),
         description=_(u'Select options that hint search engines how '
                       u'to treat this content.'),
-        value_type=schema.Choice(
-            title=_(u'Available options'),
-            vocabulary="seofields.robots"
-        ),
+        vocabulary="seofields.robots",
         required=False
     )
 

@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+  <permission id="collective.behavior.seo.settings"
+              title="Collective Behavior SEO: Settings">
+    <role name="Manager"/>
+    <role name="Site Administrator"/>
+  </permission>
+
+</configure>

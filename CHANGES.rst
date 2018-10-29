@@ -5,9 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Don't generate robots vocabulary on every request. [fredvd, mauritsvanrees]
+- Add robots field, Add control panel form with configurable list of robot tag preset combinations for editors to pick from. [fredvd]
 
-- Add meta robots as extra SEO field, based on sc.seo package. Use AjaxMultiSelectField for easy entry. [fredvd]
+- Don't generate robots vocabulary on every request. [fredvd, mauritsvanrees]
 
 - Fix implementer decorator on SEOFields behavior in python. The zcml registration was correct though. [fredvd]
 

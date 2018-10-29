@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.behavior.seo">
+
+    <include file="permissions.zcml" />
+
+    <browser:page
+        name="collective_behavior_seo_settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.CollectiveBehaviorSeoSettingsControlPanel"
+        permission="collective.behavior.seo.settings"
+        />
+
+</configure>
+
