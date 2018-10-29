@@ -19,7 +19,6 @@ before_script:
 - sh -e /etc/init.d/xvfb start
 - firefox -v
 script:
-  - bin/code-analysis
   - bin/test
 after_success:
   - bin/createcoverage
@@ -27,3 +26,4 @@ after_success:
   - bin/python -m coverage.pickle2json
   - pip install coveralls
   - coveralls
+  - bin/code-analysis
