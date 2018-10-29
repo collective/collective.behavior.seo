@@ -11,6 +11,8 @@ Changelog
 
 - Fix implementer decorator on SEOFields behavior in python. The zcml registration was correct though. [fredvd]
 
+- Revert name changes.  [jladage]
+
 
 1.0a1 (2018-10-12)
 ------------------

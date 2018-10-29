@@ -13,8 +13,8 @@
         name="collective.behavior.seo.seo_fields"
         title="SEO Fields"
         description="This behavior adds extra fields to a Content Type for SEO optimisation"
-        provides=".seofields.ISEOFields"
-        factory=".seofields.SEOFields"
+        provides=".seo_fields.ISEOFields"
+        factory=".seo_fields.SEOFields"
         marker="..interfaces.ISEOFieldsMarker"
         />
 
