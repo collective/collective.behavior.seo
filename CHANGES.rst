@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a2 (unreleased)
+1.0b1 (2018-10-30)
 ------------------
 
 - Add robots field, Add control panel form with configurable list of robot tag preset combinations for editors to pick from. [fredvd]
