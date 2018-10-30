@@ -21,7 +21,6 @@ class MetaRobotsViewlet(common.ViewletBase):
         except TypeError:
             self.behavior = None
 
-
     def available(self):
         return True if self.behavior else False
 

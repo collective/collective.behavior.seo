@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from collective.behavior.seo.behaviors.seo_fields import ISEOFields
 from collective.behavior.seo.interfaces import ISEOFieldsMarker
 from collective.behavior.seo.testing import COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING  # noqa
 from plone.app.testing import setRoles
@@ -25,7 +24,8 @@ class SeoFieldsIntegrationTest(unittest.TestCase):
             behavior.marker,
             ISEOFieldsMarker,
         )
-        behavior_name = 'collective.behavior.seo.behaviors.seo_fields.ISEOFields'
+        behavior_name = \
+            'collective.behavior.seo.behaviors.seo_fields.ISEOFields'
         behavior = getUtility(IBehavior, behavior_name)
         self.assertEqual(
             behavior.marker,

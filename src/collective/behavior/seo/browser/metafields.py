@@ -5,8 +5,9 @@ from ..interfaces import ISEOFieldsMarker
 class MetaFieldsViewlet(common.DublinCoreViewlet):
     """
     """
+
     def update(self):
-        super(MetaFieldsViewlet,self).update()
+        super(MetaFieldsViewlet, self).update()
 
         if ISEOFieldsMarker.providedBy(self.context):
 
@@ -15,4 +16,5 @@ class MetaFieldsViewlet(common.DublinCoreViewlet):
                     if key == 'description':
                         self.metatags.pop(index)
                         break
-                self.metatags.append(('description', self.context.seo_description))
+                self.metatags.append(
+                    ('description', self.context.seo_description))

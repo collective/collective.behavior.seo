@@ -3,6 +3,7 @@ from plone.app.registry.browser import controlpanel
 from collective.behavior.seo import _
 from ..interfaces import ICollectiveBehaviorSeoSettings
 
+
 class CollectiveBehaviorSeoSettingsEditForm(controlpanel.RegistryEditForm):
 
     schema = ICollectiveBehaviorSeoSettings
@@ -16,5 +17,6 @@ class CollectiveBehaviorSeoSettingsEditForm(controlpanel.RegistryEditForm):
         super(CollectiveBehaviorSeoSettingsEditForm, self).updateWidgets()
 
 
-class CollectiveBehaviorSeoSettingsControlPanel(controlpanel.ControlPanelFormWrapper):
+class CollectiveBehaviorSeoSettingsControlPanel(
+        controlpanel.ControlPanelFormWrapper):
     form = CollectiveBehaviorSeoSettingsEditForm

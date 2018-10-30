@@ -13,6 +13,7 @@ class ISEOFieldsMarker(Interface):
         ISeoFields behavior.
     """
 
+
 class ICollectiveBehaviorSeoLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
 

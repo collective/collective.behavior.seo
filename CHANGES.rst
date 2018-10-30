@@ -13,6 +13,10 @@ Changelog
 
 - Revert name changes.  [jladage]
 
+- Improve description of robots field.  [jladage]
+
+- Autopep8 and fix code-analysis feedback.  [jladage]
+ 
 
 1.0a1 (2018-10-12)
 ------------------
