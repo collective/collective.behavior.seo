@@ -5,6 +5,8 @@ Changelog
 1.0b2 (unreleased)
 ------------------
 
+- Make python3 compatible. [erral]
+
 - Update uninstall profile. [fredvd]
 
 
