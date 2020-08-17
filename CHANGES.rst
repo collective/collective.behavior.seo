@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b2 (unreleased)
+1.0.0 (2020-08-17)
 ------------------
 
 - Make python3 compatible. [erral]
