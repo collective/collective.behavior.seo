@@ -5,7 +5,7 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Make python3.8 compatible. [fredvd]
 
 
 1.0.0 (2020-08-17)
