@@ -29,4 +29,14 @@
         layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
     />
 
+    <browser:viewlet
+        name="seo.structureddata.event"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".structured_data.StructuredDataEventViewlet"
+        for="collective.behavior.seo.interfaces.IStructuredDataEvent"
+        permission="zope2.View"
+        layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+        />
+
+
 </configure>

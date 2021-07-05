@@ -18,4 +18,11 @@
         marker="..interfaces.ISEOFieldsMarker"
         />
 
+    <plone:behavior
+        name="seo.structureddata.event"
+        title="Structured Data Event"
+        description="Exposes event-like content structure data as JSON-LD snippet in the head section of the view"
+        provides="..interfaces.IStructuredDataEvent"
+        />
+
 </configure>
