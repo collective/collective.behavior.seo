@@ -40,6 +40,11 @@ class ICollectiveBehaviorSeoSettings(Interface):
     )
 
 
+class IStructuredDataArticle(Interface):
+    """ Marker interface that will enable structured data viewlet for article-like objects.
+    """
+
+
 class IStructuredDataEvent(Interface):
     """ Marker interface that will enable structured data viewlet for event-like objects.
     """

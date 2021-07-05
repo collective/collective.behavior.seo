@@ -30,6 +30,15 @@
     />
 
     <browser:viewlet
+        name="seo.structureddata.article"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".structured_data.StructuredDataArticleViewlet"
+        for="collective.behavior.seo.interfaces.IStructuredDataArticle"
+        permission="zope2.View"
+        layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+        />
+
+    <browser:viewlet
         name="seo.structureddata.event"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
         class=".structured_data.StructuredDataEventViewlet"

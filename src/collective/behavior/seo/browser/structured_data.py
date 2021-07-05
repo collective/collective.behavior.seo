@@ -35,6 +35,32 @@ class StructuredDataBaseViewlet(ViewletBase):
         )
 
 
+class StructuredDataArticleViewlet(StructuredDataBaseViewlet):
+    """Viewlet to render article-like content metadata as JSON-LD
+    """
+
+    def data(self):
+        metadata = {}
+        metadata["@context"] = "https://schema.org",
+        metadata["@type"] = "NewsArticle",
+
+        metadata["headline"] = self.context.title
+        metadata["description"] = self.context.description
+
+        if getattr(self.context, "image", None):
+            scale_util = api.content.get_view("images", self.context, self.request)
+            scale = scale_util.scale("image", scale="large")
+            metadata["image"] = scale.url
+
+        if self.context.modification_date:
+            metadata["dateModified"] = self.context.ModificationDate()
+
+        if self.context.effective_date:
+            metadata["datePublished"] = self.context.EffectiveDate()
+
+        return metadata
+
+
 class StructuredDataEventViewlet(StructuredDataBaseViewlet):
     """Viewlet to render event-like content metadata as JSON-LD
     """
