@@ -89,7 +89,7 @@ class StructuredDataEventViewlet(StructuredDataBaseViewlet):
                 "name": self.context.location,
             }
 
-        if IVenueEnabled.providedBy(self.context) and getattr(self.context, "location_uid", None):
+        if HAS_VENUE and IVenueEnabled.providedBy(self.context) and getattr(self.context, "location_uid", None):
             venue = uuidToObject(self.context.location_uid)
             if venue:
                 metadata["location"] = {
