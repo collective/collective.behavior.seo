@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-1.0.2 (unreleased)
+1.1.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Support structured data as JSON-LD for articles and events via behavior.
+  [agitator]
 
 
 1.0.1 (2020-09-09)
