@@ -7,42 +7,37 @@ import pkg_resources
 
 
 try:
-    pkg_resources.get_distribution('collective.address')
+    pkg_resources.get_distribution("collective.address")
 except pkg_resources.DistributionNotFound:
     HAS_VENUE = False
 else:
     from collective.venue.interfaces import IVenueEnabled
     from collective.address.vocabulary import get_pycountry_name
+
     HAS_VENUE = True
 
 
 class StructuredDataBaseViewlet(ViewletBase):
-    """Base viewlet to render content metadata as JSON-LD
-    """
+    """Base viewlet to render content metadata as JSON-LD"""
 
     def data(self):
         metadata = {}
-        metadata["@context"] = "https://schema.org",
+        metadata["@context"] = "https://schema.org"
         return metadata
 
-
     def render(self):
-        """Render content metadata as JSON-LD
-        """
+        """Render content metadata as JSON-LD"""
 
-        return u"<script>{metadata}</script>".format(
-            metadata=json.dumps(self.data())
-        )
+        return u"<script>{metadata}</script>".format(metadata=json.dumps(self.data()))
 
 
 class StructuredDataArticleViewlet(StructuredDataBaseViewlet):
-    """Viewlet to render article-like content metadata as JSON-LD
-    """
+    """Viewlet to render article-like content metadata as JSON-LD"""
 
     def data(self):
         metadata = {}
-        metadata["@context"] = "https://schema.org",
-        metadata["@type"] = "NewsArticle",
+        metadata["@context"] = "https://schema.org"
+        metadata["@type"] = "NewsArticle"
 
         metadata["headline"] = self.context.title
         metadata["description"] = self.context.description
@@ -62,13 +57,12 @@ class StructuredDataArticleViewlet(StructuredDataBaseViewlet):
 
 
 class StructuredDataEventViewlet(StructuredDataBaseViewlet):
-    """Viewlet to render event-like content metadata as JSON-LD
-    """
+    """Viewlet to render event-like content metadata as JSON-LD"""
 
     def data(self):
         metadata = {}
-        metadata["@context"] = "https://schema.org",
-        metadata["@type"] = "Event",
+        metadata["@context"] = "https://schema.org"
+        metadata["@type"] = "Event"
 
         metadata["name"] = self.context.title
         metadata["description"] = self.context.description
@@ -89,7 +83,11 @@ class StructuredDataEventViewlet(StructuredDataBaseViewlet):
                 "name": self.context.location,
             }
 
-        if HAS_VENUE and IVenueEnabled.providedBy(self.context) and getattr(self.context, "location_uid", None):
+        if (
+            HAS_VENUE
+            and IVenueEnabled.providedBy(self.context)
+            and getattr(self.context, "location_uid", None)
+        ):
             venue = uuidToObject(self.context.location_uid)
             if venue:
                 metadata["location"] = {
