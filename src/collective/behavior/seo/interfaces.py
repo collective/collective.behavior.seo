@@ -29,7 +29,7 @@ class ICollectiveBehaviorSeoSettings(Interface):
                 u"combination on every line. The idea here is that the "
                 u"webmaster decides which combinations of multiple tags are "
                 u"sane, so that content editors don't need to compose logical "
-                u"combinations themselves from all individuall tags."
+                u"combinations themselves from all individual tags."
 
             )
         ),

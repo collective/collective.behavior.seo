@@ -57,7 +57,7 @@ msgstr ""
 msgid "collective.behavior.seo (uninstall)"
 msgstr ""
 
-#. Default: "Enter combinations of robot tags, separated by comma's one combination on every line. The idea here is that the webmaster decides which combinations of multiple tags are sane, so that content editors don't need to compose logical combinations themselves from all individuall tags."
+#. Default: "Enter combinations of robot tags, separated by comma's one combination on every line. The idea here is that the webmaster decides which combinations of multiple tags are sane, so that content editors don't need to compose logical combinations themselves from all individual tags."
 #: ../interfaces.py:25
 msgid "robot_tags_desc"
 msgstr ""
