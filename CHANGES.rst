@@ -5,6 +5,14 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
+- Removed English locale.  I think there used to be a need for this long time ago, but not anymore, as far as I know.
+  [maurits]
+
+- Changed ``<head>`` to ``'head'`` in help text and translations.
+  ``<head>`` gets swallowed:
+  you got "the section of a page" and now "the 'head' section of a page".
+  [maurits]
+
 - Fixed broken html in edit form on Plone 6 due to Dutch typo.
   We used ``<head`` and this made the Save/Cancel buttons show only on the SEO fieldset.
   And this fieldset showed an extra footer.
