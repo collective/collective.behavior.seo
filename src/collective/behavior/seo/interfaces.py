@@ -20,17 +20,17 @@ class ICollectiveBehaviorSeoLayer(IDefaultBrowserLayer):
 class ICollectiveBehaviorSeoSettings(Interface):
 
     robot_tags = schema.Tuple(
-        title=_(u"Robot Tags"),
+        title=_("Robot Tags"),
         description=_(
-            u"robot_tags_desc",
+            "robot_tags_desc",
             default=(
-                u"Enter combinations of robot tags, separated by comma's one "
-                u"combination on every line. The idea here is that the "
-                u"webmaster decides which combinations of multiple tags are "
-                u"sane, so that content editors don't need to compose logical "
-                u"combinations themselves from all individual tags."
+                "Enter combinations of robot tags, separated by comma's one "
+                "combination on every line. The idea here is that the "
+                "webmaster decides which combinations of multiple tags are "
+                "sane, so that content editors don't need to compose logical "
+                "combinations themselves from all individual tags."
             ),
         ),
         value_type=schema.TextLine(),
-        default=(u"index, nofollow", u"noindex, follow", u"index, follow"),
+        default=("index, nofollow", "noindex, follow", "index, follow"),
     )

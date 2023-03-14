@@ -7,7 +7,7 @@ from plone.app.registry.browser import controlpanel
 class CollectiveBehaviorSeoSettingsEditForm(controlpanel.RegistryEditForm):
 
     schema = ICollectiveBehaviorSeoSettings
-    label = _(u"Collective Behavior SEO settings")
+    label = _("Collective Behavior SEO settings")
 
     def updateFields(self):
         super(CollectiveBehaviorSeoSettingsEditForm, self).updateFields()

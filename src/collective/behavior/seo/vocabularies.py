@@ -14,7 +14,7 @@ class RobotsVocabulary(object):
         tags = api.portal.get_registry_record(
             "robot_tags",
             interface=ICollectiveBehaviorSeoSettings,
-            default=u"index, follow",
+            default="index, follow",
         )
         for tag in tags:
             items.append(SimpleTerm(tag, tag, tag))
