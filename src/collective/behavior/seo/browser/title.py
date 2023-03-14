@@ -1,13 +1,7 @@
 from ..interfaces import ISEOFieldsMarker
+from html import escape
 from plone.app.layout.viewlets import common
 from Products.CMFPlone.utils import safe_unicode
-
-
-# Support Python 3.8
-try:
-    from cgi import escape
-except ImportError:
-    from html import escape
 
 
 class TitleViewlet(common.TitleViewlet):
