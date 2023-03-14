@@ -5,7 +5,10 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed broken html in edit form on Plone 6 due to Dutch typo.
+  We used ``<head`` and this made the Save/Cancel buttons show only on the SEO fieldset.
+  And this fieldset showed an extra footer.
+  [maurits]
 
 
 1.0.1 (2020-09-09)
@@ -36,7 +39,7 @@ Changelog
 - Improve description of robots field.  [jladage]
 
 - Autopep8 and fix code-analysis feedback.  [jladage]
- 
+
 
 1.0a1 (2018-10-12)
 ------------------
@@ -44,6 +47,6 @@ Changelog
 - Override update method on TitleViewlet instead of page_title, otherwise Site title still gets
   appended to the overriden title.
   [fredvd]
-  
+
 - Basic version, only for Title and Description
   [fredvd]
