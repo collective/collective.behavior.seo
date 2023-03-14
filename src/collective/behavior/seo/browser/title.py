@@ -1,6 +1,7 @@
+from ..interfaces import ISEOFieldsMarker
 from plone.app.layout.viewlets import common
 from Products.CMFPlone.utils import safe_unicode
-from ..interfaces import ISEOFieldsMarker
+
 
 # Support Python 3.8
 try:

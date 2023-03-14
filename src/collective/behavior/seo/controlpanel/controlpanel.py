@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
-from plone.app.registry.browser import controlpanel
-from collective.behavior.seo import _
 from ..interfaces import ICollectiveBehaviorSeoSettings
+from collective.behavior.seo import _
+from plone.app.registry.browser import controlpanel
 
 
 class CollectiveBehaviorSeoSettingsEditForm(controlpanel.RegistryEditForm):

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
+from collective.behavior.seo.testing import (  # noqa
+    COLLECTIVE_BEHAVIOR_SEO_ACCEPTANCE_TESTING,
+)
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
-from collective.behavior.seo.testing import COLLECTIVE_BEHAVIOR_SEO_ACCEPTANCE_TESTING  # noqa
 
 import os
 import robotsuite

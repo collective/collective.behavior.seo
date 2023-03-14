@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+from collective.behavior.seo.testing import (  # noqa
+    COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING,
+)
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from collective.behavior.seo.testing import COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING  # noqa
 
 import unittest
+
 
 try:
     from plone.base.utils import get_installer
@@ -30,8 +33,7 @@ class TestSetup(unittest.TestCase):
 
     def test_browserlayer(self):
         """Test that ICollectiveBehaviorSeoLayer is registered."""
-        from collective.behavior.seo.interfaces import (
-            ICollectiveBehaviorSeoLayer)
+        from collective.behavior.seo.interfaces import ICollectiveBehaviorSeoLayer
         from plone.browserlayer import utils
         self.assertIn(
             ICollectiveBehaviorSeoLayer,
@@ -57,8 +59,7 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that ICollectiveBehaviorSeoLayer is removed."""
-        from collective.behavior.seo.interfaces import \
-            ICollectiveBehaviorSeoLayer
+        from collective.behavior.seo.interfaces import ICollectiveBehaviorSeoLayer
         from plone.browserlayer import utils
         self.assertNotIn(
             ICollectiveBehaviorSeoLayer,

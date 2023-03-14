@@ -1,8 +1,9 @@
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from zope.schema.interfaces import IVocabularyFactory
-from zope.interface import implementer
-from plone import api
 from collective.behavior.seo.interfaces import ICollectiveBehaviorSeoSettings
+from plone import api
+from zope.interface import implementer
+from zope.schema.interfaces import IVocabularyFactory
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 
 
 @implementer(IVocabularyFactory)

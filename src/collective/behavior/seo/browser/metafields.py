@@ -1,5 +1,5 @@
-from plone.app.layout.viewlets import common
 from ..interfaces import ISEOFieldsMarker
+from plone.app.layout.viewlets import common
 
 
 class MetaFieldsViewlet(common.DublinCoreViewlet):
