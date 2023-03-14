@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../behaviors/seofields.py:40
 msgid "Used as meta description field in the 'head' section of a page instead of the default description."
-msgstr "Gebruikt als meta 'description' veld in de 'head' sectie van een pagina in plaats van de standaad omschrijving."
+msgstr "Gebruikt als meta 'description' veld in de 'head' sectie van een pagina in plaats van de standaard omschrijving."
 
 #: ../behaviors/seofields.py:33
 msgid "Used in the web page 'head' section title and browser tab instead of the default title."
