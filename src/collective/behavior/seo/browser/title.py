@@ -9,6 +9,7 @@ try:
 except ImportError:
     from html import escape
 
+
 class TitleViewlet(common.TitleViewlet):
     """Override the default Plone viewlet"""
 

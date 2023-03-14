@@ -11,16 +11,12 @@ from zope.interface import provider
 
 @provider(IFormFieldProvider)
 class ISEOFields(model.Schema):
-    """
-    """
+    """ """
+
     model.fieldset(
-        'seofields',
-        label=_(u'SEO'),
-        fields=(
-            'seo_title',
-            'seo_description',
-            'seo_robots'
-        ),
+        "seofields",
+        label=_(u"SEO"),
+        fields=("seo_title", "seo_description", "seo_robots"),
     )
 
     seo_title = schema.TextLine(
@@ -30,9 +26,9 @@ class ISEOFields(model.Schema):
             default=(
                 u"Used in the web page 'head' section title and "
                 u"browser tab instead of the default title."
-            )
+            ),
         ),
-        required=False
+        required=False,
     )
 
     seo_description = schema.Text(
@@ -42,13 +38,13 @@ class ISEOFields(model.Schema):
             default=(
                 u"Used as meta description field in the 'head' section "
                 u"of a page instead of the default description."
-            )
+            ),
         ),
-        required=False
+        required=False,
     )
 
     seo_robots = schema.Choice(
-        title=_(u'Metatag Robots'),
+        title=_(u"Metatag Robots"),
         description=_(
             u"seo_robots_help",
             default=(
@@ -60,10 +56,10 @@ class ISEOFields(model.Schema):
                 u"publishing a Top 10 recipes list with extra content "
                 u"above and below the list, in which case you would use "
                 u"'index,follow'."
-            )
+            ),
         ),
         vocabulary="seofields.robots",
-        required=False
+        required=False,
     )
 
 
@@ -75,7 +71,7 @@ class SEOFields(object):
 
     @property
     def seo_title(self):
-        if hasattr(self.context, 'seo_title'):
+        if hasattr(self.context, "seo_title"):
             return self.context.seo_title
         return None
 
@@ -85,7 +81,7 @@ class SEOFields(object):
 
     @property
     def seo_description(self):
-        if hasattr(self.context, 'seo_description'):
+        if hasattr(self.context, "seo_description"):
             return self.context.seo_description
         return None
 
@@ -95,7 +91,7 @@ class SEOFields(object):
 
     @property
     def seo_robots(self):
-        if hasattr(self.context, 'seo_robots'):
+        if hasattr(self.context, "seo_robots"):
             return self.context.seo_robots
         return None
 
