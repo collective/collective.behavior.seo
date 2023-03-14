@@ -58,6 +58,9 @@ msgstr ""
 #: ../interfaces.py:25
 msgid "robot_tags_desc"
 msgstr ""
+"Vul combinaties in van robot tags, gescheiden door komma's, één combinatie per regel. "
+"Het idee is dat de webmaster besluit welke combinaties van tags zinvol zijn. "
+"Dan hoeven redacteuren niet zelf logische combinaties bij elkaar te puzzelen uit individuele tags."
 
 #. Default: "Used as meta description field in the 'head' section of a page instead of the default description."
 #: ../behaviors/seo_fields.py:40
