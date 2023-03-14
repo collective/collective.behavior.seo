@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.0 (unreleased)
+2.0.0 (2023-03-14)
 ------------------
 
 - Fix ValueError during editing when robot tags in control panel are not unique.
