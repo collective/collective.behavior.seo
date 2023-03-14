@@ -7,7 +7,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 
 @implementer(IVocabularyFactory)
-class RobotsVocabulary(object):
+class RobotsVocabulary:
     def __call__(self, context):
 
         items = []

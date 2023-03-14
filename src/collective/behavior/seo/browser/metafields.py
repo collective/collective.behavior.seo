@@ -6,7 +6,7 @@ class MetaFieldsViewlet(common.DublinCoreViewlet):
     """ """
 
     def update(self):
-        super(MetaFieldsViewlet, self).update()
+        super().update()
 
         if ISEOFieldsMarker.providedBy(self.context):
             # in python3 this is a dict_items instance

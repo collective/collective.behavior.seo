@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 from ..interfaces import ICollectiveBehaviorSeoSettings
 from collective.behavior.seo import _
 from plone.app.registry.browser import controlpanel
@@ -10,10 +9,10 @@ class CollectiveBehaviorSeoSettingsEditForm(controlpanel.RegistryEditForm):
     label = _("Collective Behavior SEO settings")
 
     def updateFields(self):
-        super(CollectiveBehaviorSeoSettingsEditForm, self).updateFields()
+        super().updateFields()
 
     def updateWidgets(self):
-        super(CollectiveBehaviorSeoSettingsEditForm, self).updateWidgets()
+        super().updateWidgets()
 
 
 class CollectiveBehaviorSeoSettingsControlPanel(controlpanel.ControlPanelFormWrapper):

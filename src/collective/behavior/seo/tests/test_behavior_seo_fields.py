@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.behavior.seo.interfaces import ISEOFieldsMarker
 from collective.behavior.seo.testing import (  # noqa
     COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING,

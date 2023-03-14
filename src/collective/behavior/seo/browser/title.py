@@ -14,7 +14,7 @@ class TitleViewlet(common.TitleViewlet):
     """Override the default Plone viewlet"""
 
     def update(self):
-        super(TitleViewlet, self).update()
+        super().update()
 
         if ISEOFieldsMarker.providedBy(self.context):
             if self.context.seo_title:

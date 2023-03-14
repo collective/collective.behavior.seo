@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.behavior.seo import _
 from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider
@@ -65,7 +64,7 @@ class ISEOFields(model.Schema):
 
 @implementer(ISEOFields)
 @adapter(IDexterityContent)
-class SEOFields(object):
+class SEOFields:
     def __init__(self, context):
         self.context = context
 

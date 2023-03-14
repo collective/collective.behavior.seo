@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from ..interfaces import ISEOFieldsMarker
 from plone.app.layout.viewlets import common
 
@@ -16,7 +15,7 @@ class MetaRobotsViewlet(common.ViewletBase):
     """
 
     def update(self):
-        super(MetaRobotsViewlet, self).update()
+        super().update()
         try:
             self.behavior = ISEOFieldsMarker(self.context)
         except TypeError:
