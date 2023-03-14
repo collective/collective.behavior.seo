@@ -11,10 +11,10 @@ This small behavior adds extra fields used for SEO optimisation. Inspired by col
 Features
 --------
 
-Adds fields Title and Description on an extra tab SEO on contenttypes where the behavior is activated. 
+Adds fields Title and Description on an extra tab SEO on contenttypes where the behavior is activated.
 
 When the fields contain values, the <title> and <meta name='description'> in the <head> section will
-be replaced. 
+be replaced.
 
 Translations
 ------------
@@ -39,7 +39,7 @@ Install collective.behavior.seo by adding it to your buildout::
 and then running ``bin/buildout``
 
 Activate the add'on in the Plone Contron Panel. Then go to Dexterity Types in the Plone Control Panel
-and activate this behavior on selected content types. 
+and activate this behavior on selected content types.
 
 
 Contribute
@@ -47,7 +47,6 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.behavior.seo/issues
 - Source Code: https://github.com/collective/collective.behavior.seo
-- Documentation: https://docs.plone.org/foo/bar
 
 
 License
