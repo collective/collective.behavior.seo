@@ -5,6 +5,10 @@ Changelog
 2.0.0 (unreleased)
 ------------------
 
+- Fix ValueError during editing when robot tags in control panel are not unique.
+  Fixes `issue 2 <https://github.com/collective/collective.behavior.seo/issues/2>`_.
+  [maurits]
+
 - Drop support for Python 2.
   Plone 5.2 and 6.0 on Python 3 are supported.
   For older versions, use releases from the 1.x branch.

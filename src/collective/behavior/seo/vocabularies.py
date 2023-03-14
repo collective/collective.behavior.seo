@@ -16,7 +16,14 @@ class RobotsVocabulary:
             interface=ICollectiveBehaviorSeoSettings,
             default="index, follow",
         )
+        # Watch out for duplicates, likely multiple blank lines.
+        added = set()
         for tag in tags:
+            if not tag:
+                continue
+            if tag in added:
+                continue
+            added.add(tag)
             items.append(SimpleTerm(tag, tag, tag))
 
         return SimpleVocabulary(items)
