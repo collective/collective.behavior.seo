@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-10-25 11:39+0000\n"
+"POT-Creation-Date: 2023-03-14 11:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,50 +14,68 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../behaviors/seofields.py:53
-msgid "Available options"
-msgstr "Beschikbare opties"
+#: ../controlpanel/controlpanel.py:10
+msgid "Collective Behavior SEO settings"
+msgstr "Collective Behavior SEO instellingen"
 
-#: ../configure.zcml:27
+#: ../configure.zcml:29
 msgid "Installs the collective.behavior.seo add-on."
 msgstr ""
 
-#: ../behaviors/seofields.py:49
+#: ../behaviors/seo_fields.py:51
 msgid "Metatag Robots"
 msgstr "Metatag Robots"
 
-#: ../behaviors/seofields.py:23
+#: ../interfaces.py:24
+msgid "Robot Tags"
+msgstr "Robot tags"
+
+#: ../behaviors/seo_fields.py:18
 msgid "SEO"
 msgstr "SEO"
 
-#: ../behaviors/seofields.py:39
+#: ../behaviors/seo_fields.py:39
 msgid "SEO Description"
-msgstr "SEO Omschrijving"
+msgstr "SEO omschrijving"
 
-#: ../behaviors/seofields.py:32
+#: ../behaviors/seo_fields.py:27
 msgid "SEO Title"
-msgstr "SEO Titel"
+msgstr "SEO titel"
 
-#: ../behaviors/seofields.py:50
-msgid "Select options that hint search engines how to treat this content."
-msgstr "Kies opties die zoekmachines oppikken voor het gebruik van deze inhoud."
-
-#: ../configure.zcml:36
+#: ../configure.zcml:38
 msgid "Uninstalls the collective.behavior.seo add-on."
 msgstr ""
 
-#: ../behaviors/seofields.py:40
-msgid "Used as meta description field in the 'head' section of a page instead of the default description."
-msgstr "Gebruikt als meta 'description' veld in de 'head' sectie van een pagina in plaats van de standaard omschrijving."
-
-#: ../behaviors/seofields.py:33
-msgid "Used in the web page 'head' section title and browser tab instead of the default title."
-msgstr "Gebruikt in de 'head' sectie van de pagina en op de browser tab in plaats van de standaard titel."
-
-#: ../configure.zcml:27
+#: ../configure.zcml:29
 msgid "collective.behavior.seo"
 msgstr ""
 
-#: ../configure.zcml:36
+#: ../configure.zcml:38
 msgid "collective.behavior.seo (uninstall)"
 msgstr ""
+
+#. Default: "Enter combinations of robot tags, separated by comma's one combination on every line. The idea here is that the webmaster decides which combinations of multiple tags are sane, so that content editors don't need to compose logical combinations themselves from all individuall tags."
+#: ../interfaces.py:25
+msgid "robot_tags_desc"
+msgstr ""
+
+#. Default: "Used as meta description field in the 'head' section of a page instead of the default description."
+#: ../behaviors/seo_fields.py:40
+msgid "seo_description_help"
+msgstr "Gebruikt als meta 'description' veld in de 'head' sectie van een pagina in plaats van de standaard omschrijving."
+
+#. Default: "Select options that hint search engines how to treat this content. Typically listings are to navigate the site, but add little to no value in its own and should be set to 'noindex, follow'. In some cases you want a listing to be indexed. E.g. when publishing a Top 10 recipes list with extra content above and below the list, in which case you would use 'index,follow'."
+#: ../behaviors/seo_fields.py:52
+msgid "seo_robots_help"
+msgstr ""
+"Kies opties die zoekmachines oppikken voor het gebruik van deze inhoud. "
+"Normaal gezien zijn lijsten bedoeld om door de site te navigeren, "
+"maar voegen ze weinig eigen waarde toe, en zouden op 'noindex, follow' gezet moeten worden. "
+"In sommige gevallen wil je dat een lijst wel geïndexeerd wordt. "
+"Bijvoorbeeld wanneer je een Top 10 van recepten hebt met extra inhoud onder en boven de lijst. "
+"In dat geval gebruik je 'index,follow'."
+
+#. Default: "Used in the web page 'head' section title and browser tab instead of the default title."
+#: ../behaviors/seo_fields.py:28
+msgid "seo_title_help"
+msgstr "Gebruikt in de 'head' sectie van de pagina en op de browser tab in plaats van de standaard titel."
