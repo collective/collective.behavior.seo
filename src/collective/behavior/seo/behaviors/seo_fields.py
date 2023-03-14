@@ -25,14 +25,14 @@ class ISEOFields(model.Schema):
 
     seo_title = schema.TextLine(
         title=_(u"SEO Title"),
-        description=_(u"Used in the web page <head> section title and "
+        description=_(u"Used in the web page 'head' section title and "
                       u"browser tab instead of the default title."),
         required=False
     )
 
     seo_description = schema.Text(
         title=_(u"SEO Description"),
-        description=_(u"Used as meta description field in the <head> section "
+        description=_(u"Used as meta description field in the 'head' section "
                       u"of a page instead of the default description."),
         required=False
     )
