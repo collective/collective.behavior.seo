@@ -2,10 +2,13 @@ Changelog
 =========
 
 
-1.0.3 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Drop support for Python 2.
+  Plone 5.2 and 6.0 on Python 3 are supported.
+  For older versions, use releases from the 1.x branch.
+  [maurits]
 
 
 1.0.2 (2023-03-14)
