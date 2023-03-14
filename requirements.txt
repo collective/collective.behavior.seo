@@ -1,2 +1,6 @@
-setuptools==38.2.4
-zc.buildout==2.11.4
+pip==23.0.1
+setuptools==65.7.0
+# This is a bit too strict with versions, for example breaking on 'plone.app.contentmenu>=1.1.6dev-r22380'
+# setuptools==67.6.0
+wheel==0.38.4
+zc.buildout==3.0.1

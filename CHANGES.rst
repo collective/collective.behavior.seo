@@ -9,6 +9,10 @@ Changelog
   Fixes `issue 2 <https://github.com/collective/collective.behavior.seo/issues/2>`_.
   [maurits]
 
+- Add Continuous Integration for supported Plone and Python combinations.
+  Uses tox, gh-actions, and `collective/tox-action <https://github.com/collective/tox-action>`_.
+  [maurits]
+
 - Drop support for Python 2.
   Plone 5.2 and 6.0 on Python 3 are supported.
   For older versions, use releases from the 1.x branch.
