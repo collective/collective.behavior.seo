@@ -25,28 +25,43 @@ class ISEOFields(model.Schema):
 
     seo_title = schema.TextLine(
         title=_(u"SEO Title"),
-        description=_(u"Used in the web page 'head' section title and "
-                      u"browser tab instead of the default title."),
+        description=_(
+            u"seo_title_help",
+            default=(
+                u"Used in the web page 'head' section title and "
+                u"browser tab instead of the default title."
+            )
+        ),
         required=False
     )
 
     seo_description = schema.Text(
         title=_(u"SEO Description"),
-        description=_(u"Used as meta description field in the 'head' section "
-                      u"of a page instead of the default description."),
+        description=_(
+            u"seo_description_help",
+            default=(
+                u"Used as meta description field in the 'head' section "
+                u"of a page instead of the default description."
+            )
+        ),
         required=False
     )
 
     seo_robots = schema.Choice(
         title=_(u'Metatag Robots'),
-        description=_(u"Select options that hint search engines how "
-                      u"to treat this content. Typically listings are to"
-                      u"navigate the site, but add little to no value in it's "
-                      u"own and should be set to 'noindex, follow'. In some"
-                      u"cases you want a listing to be indexed. E.g. when"
-                      u"publishing a Top 10 recipes list with extra content"
-                      u"above and below the list, in which case you'd use"
-                      u"'index,follow'."),
+        description=_(
+            u"seo_robots_help",
+            default=(
+                u"Select options that hint search engines how "
+                u"to treat this content. Typically listings are to "
+                u"navigate the site, but add little to no value in its "
+                u"own and should be set to 'noindex, follow'. In some "
+                u"cases you want a listing to be indexed. E.g. when "
+                u"publishing a Top 10 recipes list with extra content "
+                u"above and below the list, in which case you would use "
+                u"'index,follow'."
+            )
+        ),
         vocabulary="seofields.robots",
         required=False
     )
