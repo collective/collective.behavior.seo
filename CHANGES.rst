@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.2 (unreleased)
+1.0.2 (2023-03-14)
 ------------------
 
 - Removed English locale.  I think there used to be a need for this long time ago, but not anymore, as far as I know.
