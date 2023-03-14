@@ -34,15 +34,15 @@ setup(
     keywords='Python Plone',
     author='Zest Software',
     author_email='info@zestsoftware.nl',
-    url='https://pypi.python.org/pypi/collective.behavior.seo',
+    url='https://github.com/collective/collective.behavior.seo',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['collective', 'collective.behavior'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
+    python_requires=">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*",
     install_requires=[
-        # -*- Extra requirements: -*-
         'plone.api>=1.8.4',
         'Products.GenericSetup>=1.8.2',
         'setuptools',
