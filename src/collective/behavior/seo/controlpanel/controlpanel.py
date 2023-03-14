@@ -8,7 +8,6 @@ class CollectiveBehaviorSeoSettingsEditForm(controlpanel.RegistryEditForm):
 
     schema = ICollectiveBehaviorSeoSettings
     label = _(u'Collective Behavior SEO settings')
-    description = _(u'')
 
     def updateFields(self):
         super(CollectiveBehaviorSeoSettingsEditForm, self).updateFields()
