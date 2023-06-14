@@ -12,4 +12,15 @@
     />
   </genericsetup:upgradeSteps>
 
+
+  <genericsetup:upgradeSteps
+    source="1001"
+    destination="1002"
+    profile="collective.behavior.seo:default">
+    <genericsetup:upgradeDepends
+      title="Install new dependency"
+      import_steps="Install collective.z3cform.datagridfield as a dependency"
+    />
+  </genericsetup:upgradeSteps>
+
 </configure>

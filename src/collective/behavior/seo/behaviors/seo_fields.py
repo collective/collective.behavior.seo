@@ -1,3 +1,5 @@
+from collective.z3cform.datagridfield.row import DictRow
+from plone.autoform.directives import widget
 from collective.behavior.seo import _
 from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider
@@ -5,7 +7,13 @@ from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
 from zope.component import adapter
 from zope.interface import implementer
-from zope.interface import provider
+from zope.interface import provider, Interface
+from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
+
+
+class ICustomMetatagsSchema(Interface):
+    name = schema.TextLine(title=_("Name"))
+    value = schema.TextLine(title=_("Value"))
 
 
 @provider(IFormFieldProvider)
@@ -15,7 +23,15 @@ class ISEOFields(model.Schema):
     model.fieldset(
         "seofields",
         label=_("SEO"),
-        fields=("seo_title", "seo_description", "seo_robots", "seo_keywords", "seo_distribution", "seo_canonical"),
+        fields=(
+            "seo_title",
+            "seo_description",
+            "seo_robots",
+            "seo_keywords",
+            "seo_distribution",
+            "seo_canonical",
+            "seo_custom_metatags",
+        ),
     )
 
     seo_title = schema.TextLine(
@@ -70,7 +86,7 @@ class ISEOFields(model.Schema):
     seo_distribution = schema.TextLine(
         title=_("SEO Distribution"),
         description=_("distribution and CD.distribution"),
-        default=("Global"),
+        default="Global",
         required=False,
     )
     seo_canonical = schema.TextLine(
@@ -79,6 +95,11 @@ class ISEOFields(model.Schema):
         required=False,
     )
 
+    seo_custom_metatags = schema.List(
+        title=_("Custom metatags"),
+        value_type=DictRow(title="metatag", schema=ICustomMetatagsSchema),
+    )
+    widget(seo_custom_metatags=DataGridFieldFactory)
 
 
 @implementer(ISEOFields)
@@ -146,3 +167,13 @@ class SEOFields:
     @seo_canonical.setter
     def seo_canonical(self, value):
         self.context.seo_canonical = value
+
+    @property
+    def seo_custom_metatags(self):
+        if hasattr(self.context, "seo_custom_metatags"):
+            return self.context.seo_custom_metatags
+        return None
+
+    @seo_custom_metatags.setter
+    def seo_custom_metatags(self, value):
+        self.context.seo_custom_metatags = value
