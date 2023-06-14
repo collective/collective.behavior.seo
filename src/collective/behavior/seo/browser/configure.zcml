@@ -28,12 +28,14 @@
         permission="zope2.View"
         layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
     />
+
     <browser:viewlet
-        name="collective.behavior.seo.canonicalurl"
-        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        name="plone.links.canonical_url"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
         class=".canonicalurl.CanonicalUrlViewlet"
-        template="canonicalurl.pt"
         permission="zope2.View"
         layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+
+
     />
 </configure>
