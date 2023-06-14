@@ -9,12 +9,16 @@ class MetaFieldsViewlet(common.DublinCoreViewlet):
         super().update()
 
         if ISEOFieldsMarker.providedBy(self.context):
-            # in python3 this is a dict_items instance
-            self.metatags = list(self.metatags)
-            if self.context.seo_description:
-                for index, (key, value) in enumerate(self.metatags):
-                    if key == "description":
-                        self.metatags.pop(index)
-                        break
+            self.metatags = dict(self.metatags)  # Convert to a dictionary for faster lookups
 
-                self.metatags.append(("description", self.context.seo_description))
+            if self.context.seo_description:
+                self.metatags["description"] = self.context.seo_description
+
+            if self.context.seo_keywords:
+                self.metatags["keywords"] = self.context.seo_keywords
+
+            if self.context.seo_keywords:
+                self.metatags["distribution"] = self.context.seo_distribution
+                self.metatags["DC:distribution"] = self.context.seo_distribution
+
+            self.metatags = list(self.metatags.items())  # Convert back to a list of tuples

@@ -15,7 +15,7 @@ class ISEOFields(model.Schema):
     model.fieldset(
         "seofields",
         label=_("SEO"),
-        fields=("seo_title", "seo_description", "seo_robots"),
+        fields=("seo_title", "seo_description", "seo_robots", "seo_keywords", "seo_distribution", "seo_canonical"),
     )
 
     seo_title = schema.TextLine(
@@ -61,6 +61,25 @@ class ISEOFields(model.Schema):
         required=False,
     )
 
+    seo_keywords = schema.TextLine(
+        title=_("SEO Keywords"),
+        description=_("Keywords separated by a comma."),
+        required=False,
+    )
+
+    seo_distribution = schema.TextLine(
+        title=_("SEO Distribution"),
+        description=_("distribution and CD.distribution"),
+        default=("Global"),
+        required=False,
+    )
+    seo_canonical = schema.TextLine(
+        title=_("SEO Canonical"),
+        description=_("custom canonical link"),
+        required=False,
+    )
+
+
 
 @implementer(ISEOFields)
 @adapter(IDexterityContent)
@@ -97,3 +116,33 @@ class SEOFields:
     @seo_robots.setter
     def seo_robots(self, value):
         self.context.seo_robots = value
+
+    @property
+    def seo_keywords(self):
+        if hasattr(self.context, "seo_keywords"):
+            return self.context.seo_keywords
+        return None
+
+    @seo_keywords.setter
+    def seo_keywords(self, value):
+        self.context.seo_keywords = value
+
+    @property
+    def seo_distribution(self):
+        if hasattr(self.context, "seo_distribution"):
+            return self.context.seo_distribution
+        return None
+
+    @seo_distribution.setter
+    def seo_distribution(self, value):
+        self.context.seo_distribution = value
+
+    @property
+    def seo_canonical(self):
+        if hasattr(self.context, "seo_canonical"):
+            return self.context.seo_canonical
+        return None
+
+    @seo_canonical.setter
+    def seo_canonical(self, value):
+        self.context.seo_canonical = value
