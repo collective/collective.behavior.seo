@@ -50,6 +50,7 @@ setup(
         "Products.GenericSetup",
         "setuptools",
         "z3c.jbot",
+        "collective.z3cform.datagridfield",
     ],
     extras_require={
         "test": [
