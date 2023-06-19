@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-2.0.1 (unreleased)
-------------------
+2.0.1b1+once.1 (2023-06-19)
+---------------------------
 
 - custom metatags [Mikel Larreategi <mlarreategi@codesyntax.com>]
 
