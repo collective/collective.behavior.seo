@@ -25,9 +25,10 @@ class MetaFieldsViewlet(common.DublinCoreViewlet):
                     "DC:distribution"
                 ] = self.context.seo_distribution
 
-            if self.context.seo_custom_metatags:
-                for item in self.context.seo_custom_metatags:
-                    self.metatags[item["name"]] = item["value"]
+            # if self.context.seo_custom_metatags:
+            #     import pdb;pdb.set_trace()
+            #     for item in self.context.seo_custom_metatags:
+            #         self.metatags[item["name"]] = item["value"]
 
             self.metatags = list(
                 self.metatags.items()

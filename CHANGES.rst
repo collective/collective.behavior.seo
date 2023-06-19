@@ -5,7 +5,18 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- custom metatags [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+- override existing canonical viewlet [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+- cannonical url [Nagore Ruiz de Escudero <nruiz@codesyntax.com>]
+
+- new metatags [Nagore Ruiz de Escudero <nruiz@codesyntax.com>]
+
+-  [Maurits van Rees <maurits@vanrees.org>]
+
+- [ci skip] [Maurits van Rees <maurits@vanrees.org>]
+
 
 
 2.0.0 (2023-03-14)
