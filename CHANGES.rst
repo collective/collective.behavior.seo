@@ -5,7 +5,8 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update Translations for 'nl' and add translations for 'de'
+  [1letter]
 
 
 2.0.0 (2023-03-14)
