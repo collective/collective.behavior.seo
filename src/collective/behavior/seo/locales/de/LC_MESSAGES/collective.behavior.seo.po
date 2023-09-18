@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-09-18 12:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../controlpanel/controlpanel.py:9
+msgid "Collective Behavior SEO settings"
+msgstr "Einstellungen Collective Behavior SEO"
+
+#: ../configure.zcml:26
+msgid "Installs the collective.behavior.seo add-on."
+msgstr "Installiert collective.behavior.seo Erweiterung"
+
+#: ../behaviors/seo_fields.py:46
+msgid "Metatag Robots"
+msgstr "Metatag Robots"
+
+#: ../interfaces.py:22
+msgid "Robot Tags"
+msgstr "Robot Tags"
+
+#: ../behaviors/seo_fields.py:17
+msgid "SEO"
+msgstr "SEO"
+
+#: ../behaviors/seo_fields.py:34
+msgid "SEO Description"
+msgstr "SEO Beschreibung"
+
+#: ../behaviors/configure.zcml:19
+msgid "SEO Fields"
+msgstr "SEO Felder"
+
+#: ../behaviors/seo_fields.py:22
+msgid "SEO Title"
+msgstr "SEO Titel"
+
+#: ../behaviors/configure.zcml:19
+msgid "This behavior adds extra fields to a Content Type for SEO optimisation"
+msgstr "Fügt einem Inhaltstyp zusätzliche Felder zur SEO-Optimierung hinzu"
+
+#: ../configure.zcml:35
+msgid "Uninstalls the collective.behavior.seo add-on."
+msgstr "Deinstalliert collective.behavior.seo Erweiterung"
+
+#: ../configure.zcml:26
+msgid "collective.behavior.seo"
+msgstr "collective.behavior.seo"
+
+#: ../configure.zcml:35
+msgid "collective.behavior.seo (uninstall)"
+msgstr "collective.behavior.seo (uninstall)"
+
+#. Default: "Enter combinations of robot tags, separated by comma's one combination on every line. The idea here is that the webmaster decides which combinations of multiple tags are sane, so that content editors don't need to compose logical combinations themselves from all individual tags."
+#: ../interfaces.py:23
+msgid "robot_tags_desc"
+msgstr "Geben Sie Kombinationen von Robot-Tags ein, getrennt durch Kommas, eine Kombination in jeder Zeile. Die Idee dahinter ist, dass der Webmaster entscheidet, welche Kombinationen mehrerer Tags sinnvoll sind, so dass die Inhaltsredakteure nicht selbst logische Kombinationen aus allen einzelnen Tags zusammenstellen müssen."
+
+#. Default: "Used as meta description field in the 'head' section of a page instead of the default description."
+#: ../behaviors/seo_fields.py:35
+msgid "seo_description_help"
+msgstr "Wird als Meta-Beschreibungsfeld im 'Head'-Abschnitt einer Seite anstelle der Standardbeschreibung verwendet."
+
+#. Default: "Select options that hint search engines how to treat this content. Typically listings are to navigate the site, but add little to no value in its own and should be set to 'noindex, follow'. In some cases you want a listing to be indexed. E.g. when publishing a Top 10 recipes list with extra content above and below the list, in which case you would use 'index,follow'."
+#: ../behaviors/seo_fields.py:47
+msgid "seo_robots_help"
+msgstr "Wählen Sie Optionen aus, die den Suchmaschinen mitteilen, wie sie diesen Inhalt behandeln sollen. In der Regel dienen die Einträge der Navigation auf der Website, haben aber für sich genommen wenig bis gar keinen Wert und sollten auf 'noindex, follow' gesetzt werden. In manchen Fällen möchten Sie, dass ein Eintrag indiziert wird. Wenn Sie z. B. eine Top-10-Rezepte-Liste mit zusätzlichem Inhalt oberhalb und unterhalb der Liste veröffentlichen, würden Sie in diesem Fall 'index,follow' verwenden."
+
+#. Default: "Used in the web page 'head' section title and browser tab instead of the default title."
+#: ../behaviors/seo_fields.py:23
+msgid "seo_title_help"
+msgstr "Wird im Titel des Abschnitts 'Head' der Webseite und im Browser-Tab anstelle des Standardtitels verwendet."
