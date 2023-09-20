@@ -49,19 +49,19 @@ msgstr "SEO titel"
 
 #: ../behaviors/configure.zcml:19
 msgid "This behavior adds extra fields to a Content Type for SEO optimisation"
-msgstr "Dit gedrag voegt extra velden toe aan een Inhoudstype voor SEO-optimalisatie"
+msgstr "Dit voegt extra velden toe aan een contenttype voor SEO-optimalisatie"
 
 #: ../configure.zcml:35
 msgid "Uninstalls the collective.behavior.seo add-on."
-msgstr ""
+msgstr "Deactiveert de collective.behavior.seo module."
 
 #: ../configure.zcml:26
 msgid "collective.behavior.seo"
-msgstr ""
+msgstr "collective.behavior.seo"
 
 #: ../configure.zcml:35
 msgid "collective.behavior.seo (uninstall)"
-msgstr ""
+msgstr "collective.behavior.seo (deactiveren)"
 
 #. Default: "Enter combinations of robot tags, separated by comma's one combination on every line. The idea here is that the webmaster decides which combinations of multiple tags are sane, so that content editors don't need to compose logical combinations themselves from all individual tags."
 #: ../interfaces.py:23
