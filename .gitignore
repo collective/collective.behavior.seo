@@ -19,6 +19,7 @@ parts/
 src/*
 test.plone_addon/
 var/
+venv/
 # files
 .installed.cfg
 .mr.developer.cfg

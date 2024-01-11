@@ -1,21 +1,10 @@
 Changelog
 =========
 
-2.0.1b1+once.3 (2024-01-11)
----------------------------
-
-- Preparing release: update outdated version. [Bermudez Horcajada, Rafael <rber474@gmail.com>]
-
-
-
-2.0.1b1+once.2 (2023-06-21)
----------------------------
+2.0.1 (unreleased)
+------------------
 
 - uncomment metatag fields [Nagore Ruiz de Escudero nruiz@codesyntax.com]
-
-
-2.0.1b1+once.1 (2023-06-19)
----------------------------
 
 - custom metatags [Mikel Larreategi <mlarreategi@codesyntax.com>]
 
@@ -25,10 +14,8 @@ Changelog
 
 - new metatags [Nagore Ruiz de Escudero <nruiz@codesyntax.com>]
 
--  [Maurits van Rees <maurits@vanrees.org>]
-
-- [ci skip] [Maurits van Rees <maurits@vanrees.org>]
-
+- Update Translations for 'nl' and add translations for 'de'
+  [1letter]
 
 
 2.0.0 (2023-03-14)
