@@ -1,11 +1,17 @@
 Changelog
 =========
 
-
-2.0.1b1+once.2 (unreleased)
+2.0.1b1+once.3 (unreleased)
 ---------------------------
 
 - Nothing changed yet.
+
+
+
+2.0.1b1+once.2 (2023-06-21)
+---------------------------
+
+- uncomment metatag fields [Nagore Ruiz de Escudero nruiz@codesyntax.com]
 
 
 2.0.1b1+once.1 (2023-06-19)
