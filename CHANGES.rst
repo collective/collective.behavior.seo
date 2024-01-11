@@ -4,7 +4,7 @@ Changelog
 2.0.1b1+once.3 (unreleased)
 ---------------------------
 
-- Nothing changed yet.
+- Preparing release: update outdated version. [Bermudez Horcajada, Rafael <rber474@gmail.com>]
 
 
 
