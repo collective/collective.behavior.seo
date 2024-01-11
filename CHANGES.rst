@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.1b1+once.3 (unreleased)
+2.0.1b1+once.3 (2024-01-11)
 ---------------------------
 
 - Preparing release: update outdated version. [Bermudez Horcajada, Rafael <rber474@gmail.com>]
