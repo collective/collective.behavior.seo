@@ -1,9 +1,18 @@
 Changelog
 =========
 
-
 2.0.1 (unreleased)
 ------------------
+
+- uncomment metatag fields [Nagore Ruiz de Escudero nruiz@codesyntax.com]
+
+- custom metatags [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+- override existing canonical viewlet [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+- cannonical url [Nagore Ruiz de Escudero <nruiz@codesyntax.com>]
+
+- new metatags [Nagore Ruiz de Escudero <nruiz@codesyntax.com>]
 
 - Update Translations for 'nl' and add translations for 'de'
   [1letter]

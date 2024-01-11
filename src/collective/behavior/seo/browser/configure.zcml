@@ -29,4 +29,13 @@
         layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
     />
 
+    <browser:viewlet
+        name="plone.links.canonical_url"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+        class=".canonicalurl.CanonicalUrlViewlet"
+        permission="zope2.View"
+        layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+
+
+    />
 </configure>

@@ -1,3 +1,5 @@
+from collective.z3cform.datagridfield.row import DictRow
+from plone.autoform.directives import widget
 from collective.behavior.seo import _
 from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider
@@ -5,7 +7,13 @@ from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
 from zope.component import adapter
 from zope.interface import implementer
-from zope.interface import provider
+from zope.interface import provider, Interface
+from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
+
+
+class ICustomMetatagsSchema(Interface):
+    name = schema.TextLine(title=_("Name"))
+    value = schema.TextLine(title=_("Value"))
 
 
 @provider(IFormFieldProvider)
@@ -15,7 +23,15 @@ class ISEOFields(model.Schema):
     model.fieldset(
         "seofields",
         label=_("SEO"),
-        fields=("seo_title", "seo_description", "seo_robots"),
+        fields=(
+            "seo_title",
+            "seo_description",
+            "seo_robots",
+            "seo_keywords",
+            "seo_distribution",
+            "seo_canonical",
+            "seo_custom_metatags",
+        ),
     )
 
     seo_title = schema.TextLine(
@@ -61,6 +77,30 @@ class ISEOFields(model.Schema):
         required=False,
     )
 
+    seo_keywords = schema.TextLine(
+        title=_("SEO Keywords"),
+        description=_("Keywords separated by a comma."),
+        required=False,
+    )
+
+    seo_distribution = schema.TextLine(
+        title=_("SEO Distribution"),
+        description=_("distribution and CD.distribution"),
+        default="Global",
+        required=False,
+    )
+    seo_canonical = schema.TextLine(
+        title=_("SEO Canonical"),
+        description=_("custom canonical link"),
+        required=False,
+    )
+
+    seo_custom_metatags = schema.List(
+        title=_("Custom metatags"),
+        value_type=DictRow(title="metatag", schema=ICustomMetatagsSchema),
+    )
+    widget(seo_custom_metatags=DataGridFieldFactory)
+
 
 @implementer(ISEOFields)
 @adapter(IDexterityContent)
@@ -97,3 +137,43 @@ class SEOFields:
     @seo_robots.setter
     def seo_robots(self, value):
         self.context.seo_robots = value
+
+    @property
+    def seo_keywords(self):
+        if hasattr(self.context, "seo_keywords"):
+            return self.context.seo_keywords
+        return None
+
+    @seo_keywords.setter
+    def seo_keywords(self, value):
+        self.context.seo_keywords = value
+
+    @property
+    def seo_distribution(self):
+        if hasattr(self.context, "seo_distribution"):
+            return self.context.seo_distribution
+        return None
+
+    @seo_distribution.setter
+    def seo_distribution(self, value):
+        self.context.seo_distribution = value
+
+    @property
+    def seo_canonical(self):
+        if hasattr(self.context, "seo_canonical"):
+            return self.context.seo_canonical
+        return None
+
+    @seo_canonical.setter
+    def seo_canonical(self, value):
+        self.context.seo_canonical = value
+
+    @property
+    def seo_custom_metatags(self):
+        if hasattr(self.context, "seo_custom_metatags"):
+            return self.context.seo_custom_metatags
+        return None
+
+    @seo_custom_metatags.setter
+    def seo_custom_metatags(self, value):
+        self.context.seo_custom_metatags = value
