@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.1 (unreleased)
+2.0.1 (2024-01-25)
 ------------------
 
 - Update Translations for 'nl' and add translations for 'de'
