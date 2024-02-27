@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.behavior.seo",
-    version="2.0.1b1+once.3",
+    version="2.0.1b1+once.4",
     description="An add-on for Plone",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

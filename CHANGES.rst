@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.0.1 (unreleased)
-------------------
+2.0.1b1+once.4 (2024-02-27)
+---------------------------
 
 - uncomment metatag fields [Nagore Ruiz de Escudero nruiz@codesyntax.com]
 
