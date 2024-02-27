@@ -33,7 +33,7 @@
         name="plone.links.canonical_url"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
         class=".canonicalurl.CanonicalUrlViewlet"
-        permission="zope2.View"
+        permission="zope.Public"
         layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
 
 
