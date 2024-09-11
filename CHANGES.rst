@@ -8,7 +8,6 @@ Changelog
 - Implement meta keywords, meta distribution, canonical url override and custom meta tags. Mimic-ing que implementation in quintagroup.seoptimizer
   [erral & nruiz]
 
-
 2.0.1 (2024-01-25)
 ------------------
 
