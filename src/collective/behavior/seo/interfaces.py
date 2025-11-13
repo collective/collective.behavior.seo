@@ -33,3 +33,13 @@ class ICollectiveBehaviorSeoSettings(Interface):
         value_type=schema.TextLine(),
         default=("index, nofollow", "noindex, follow", "index, follow"),
     )
+
+
+class IStructuredDataArticle(Interface):
+    """ Marker interface that will enable structured data viewlet for article-like objects.
+    """
+
+
+class IStructuredDataEvent(Interface):
+    """ Marker interface that will enable structured data viewlet for event-like objects.
+    """
