@@ -1,5 +1,4 @@
 graft src/collective
-graft docs
 include *.rst
 include requirements.txt
 include *.GPL

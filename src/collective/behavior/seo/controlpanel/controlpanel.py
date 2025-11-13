@@ -1,22 +1,19 @@
-# -*- coding: UTF-8 -*-
-from plone.app.registry.browser import controlpanel
-from collective.behavior.seo import _
 from ..interfaces import ICollectiveBehaviorSeoSettings
+from collective.behavior.seo import _
+from plone.app.registry.browser import controlpanel
 
 
 class CollectiveBehaviorSeoSettingsEditForm(controlpanel.RegistryEditForm):
 
     schema = ICollectiveBehaviorSeoSettings
-    label = _(u'Collective Behavior SEO settings')
-    description = _(u'')
+    label = _("Collective Behavior SEO settings")
 
     def updateFields(self):
-        super(CollectiveBehaviorSeoSettingsEditForm, self).updateFields()
+        super().updateFields()
 
     def updateWidgets(self):
-        super(CollectiveBehaviorSeoSettingsEditForm, self).updateWidgets()
+        super().updateWidgets()
 
 
-class CollectiveBehaviorSeoSettingsControlPanel(
-        controlpanel.ControlPanelFormWrapper):
+class CollectiveBehaviorSeoSettingsControlPanel(controlpanel.ControlPanelFormWrapper):
     form = CollectiveBehaviorSeoSettingsEditForm

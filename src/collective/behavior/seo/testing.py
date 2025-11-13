@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
@@ -21,7 +20,7 @@ class CollectiveBehaviorSeoLayer(PloneSandboxLayer):
         self.loadZCML(package=collective.behavior.seo)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'collective.behavior.seo:default')
+        applyProfile(portal, "collective.behavior.seo:default")
 
 
 COLLECTIVE_BEHAVIOR_SEO_FIXTURE = CollectiveBehaviorSeoLayer()
@@ -29,13 +28,13 @@ COLLECTIVE_BEHAVIOR_SEO_FIXTURE = CollectiveBehaviorSeoLayer()
 
 COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_BEHAVIOR_SEO_FIXTURE,),
-    name='CollectiveBehaviorSeoLayer:IntegrationTesting',
+    name="CollectiveBehaviorSeoLayer:IntegrationTesting",
 )
 
 
 COLLECTIVE_BEHAVIOR_SEO_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_BEHAVIOR_SEO_FIXTURE,),
-    name='CollectiveBehaviorSeoLayer:FunctionalTesting',
+    name="CollectiveBehaviorSeoLayer:FunctionalTesting",
 )
 
 
@@ -45,5 +44,5 @@ COLLECTIVE_BEHAVIOR_SEO_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='CollectiveBehaviorSeoLayer:AcceptanceTesting',
+    name="CollectiveBehaviorSeoLayer:AcceptanceTesting",
 )

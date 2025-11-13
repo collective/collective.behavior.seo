@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
-from plone.app.layout.viewlets import common
 from ..interfaces import ISEOFieldsMarker
+from plone.app.layout.viewlets import common
+
 import logging
 
 
@@ -11,11 +11,11 @@ logger = logging.getLogger("collective.behavior.seo")
 
 class MetaRobotsViewlet(common.ViewletBase):
     """Renders the  <meta name="robots"> tag if the IMetaRobots is applied
-       to the context
+    to the context
     """
 
     def update(self):
-        super(MetaRobotsViewlet, self).update()
+        super().update()
         try:
             self.behavior = ISEOFieldsMarker(self.context)
         except TypeError:
@@ -28,5 +28,5 @@ class MetaRobotsViewlet(common.ViewletBase):
         content = self.behavior.seo_robots
         # If there is no restriction, we explicity allow indexing
         if not content:
-            return 'all'
+            return "all"
         return content

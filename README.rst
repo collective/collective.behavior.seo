@@ -6,15 +6,20 @@
 collective.behavior.seo
 =======================
 
-This small behavior adds extra fields used for SEO optimisation. Inspired by collective.seo, but the data store now uses dexterity/behavior practice.
+This small behavior adds extra fields used for SEO optimisation.
+Inspired by collective.seo, but the data store now uses dexterity/behavior practice.
+
 
 Features
 --------
 
-Adds fields Title and Description on an extra tab SEO on contenttypes where the behavior is activated. 
+Adds fields SEO Title, SEO Description, and Metatag Robots on an extra tab SEO on contenttypes where the behavior is activated.
 
-When the fields contain values, the <title> and <meta name='description'> in the <head> section will
-be replaced. 
+When the fields contain values, the ``<title>`` and ``<meta name='description'>`` in the ``<head>`` section will be replaced.
+Also a ``<meta name="robots">`` tag will be added.
+
+In a control panel you can give a list of valid combinations of robot tags: ``follow/nofollow``, ``index/noindex``.
+
 
 Translations
 ------------
@@ -22,6 +27,7 @@ Translations
 This product has been translated into:
 
 - Dutch
+
 
 Installation
 ------------
@@ -36,10 +42,11 @@ Install collective.behavior.seo by adding it to your buildout::
         collective.behavior.seo
 
 
-and then running ``bin/buildout``
+and then running ``bin/buildout``.
+Or install it with ``pip``.
 
 Activate the add'on in the Plone Contron Panel. Then go to Dexterity Types in the Plone Control Panel
-and activate this behavior on selected content types. 
+and activate this behavior on selected content types.
 
 
 Contribute
@@ -47,7 +54,6 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.behavior.seo/issues
 - Source Code: https://github.com/collective/collective.behavior.seo
-- Documentation: https://docs.plone.org/foo/bar
 
 
 License
