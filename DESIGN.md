@@ -1,5 +1,4 @@
-Design decisions
-================
+# Design decisions
 
 As with every software project, Plone add'ons have many design decisions which are trade offs between complexity, end
 user friendliness, webmaster/integrator flexibility and configurations, etc.etc. If you wonder "Why didn't they ..."

@@ -1,7 +1,8 @@
 graft src/collective
-include *.rst
+include *.md
 include requirements.txt
 include constraints.txt
+include instance.yaml
 include *.GPL
 global-exclude *.pyc
 
