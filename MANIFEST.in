@@ -1,5 +1,9 @@
 graft src/collective
 include *.rst
 include requirements.txt
+include constraints.txt
 include *.GPL
 global-exclude *.pyc
+
+recursive-exclude jinja *
+recursive-exclude news *

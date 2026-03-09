@@ -12,7 +12,7 @@ pick and choose from individual tags mentioned in robots documentation. We even 
 Plone 5.1 with look-ahead typing.
 
 Problem is: most content editors don't know exactly which fields do what, editors will have to multiple click their
-selection togeter, robot tags can get outdated (a few from sc.seo were not best practice anymore). It depends on your
+selection together, robot tags can get outdated (a few from sc.seo were not best practice anymore). It depends on your
 audience, but the webmaster can now create sets of tags for every individual site. And there are probably 3 - 6  sane
 combinations, which are easy to select by content editors.
 

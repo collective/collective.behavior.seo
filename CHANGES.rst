@@ -83,7 +83,7 @@ Changelog
 ------------------
 
 - Override update method on TitleViewlet instead of page_title, otherwise Site title still gets
-  appended to the overriden title.
+  appended to the overridden title.
   [fredvd]
 
 - Basic version, only for Title and Description

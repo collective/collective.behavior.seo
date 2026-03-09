@@ -1,66 +1,35 @@
-# ============================================================================
-# EXAMPLE ROBOT TESTS
-# ============================================================================
+# Start a single robot test
 #
-# Run this robot test stand-alone:
+# Install rfbrowser
 #
-#  $ bin/test -s collective.behavior.seo -t test_example.robot --all
+# rfbrowser init
 #
-# Run this robot test with robot server (which is faster):
+# Start the server
 #
-# 1) Start robot server:
+# WSGI_SERVER_HOST=localhost WSGI_SERVER_PORT=50003 robot-server collective.behavior.seo.testing.COLLECTIVE_BEHAVIOR_SEO_ACCEPTANCE_TESTING
 #
-# $ bin/robot-server --reload-path src collective.behavior.seo.testing.COLLECTIVE_BEHAVIOR_SEO_ACCEPTANCE_TESTING
+# Start the test
 #
-# 2) Run robot tests:
+# WSGI_SERVER_HOST=localhost WSGI_SERVER_PORT=50003 robot src/collective/behavior/seo/tests/robot/test_example.robot
 #
-# $ bin/robot src/collective/behavior/seo/tests/robot/test_example.robot
-#
-# See the http://docs.plone.org for further details (search for robot
-# framework).
-#
-# ============================================================================
-
-*** Settings *****************************************************************
-
-Resource  plone/app/robotframework/selenium.robot
-Resource  plone/app/robotframework/keywords.robot
-
-Library  Remote  ${PLONE_URL}/RobotRemote
-
-Test Setup  Open test browser
-Test Teardown  Close all browsers
 
 
-*** Test Cases ***************************************************************
+
+*** Settings ***
+
+Resource  keywords.robot
+
+Test Setup    Run keyword    Default Setup
+Test Teardown    Run keyword    Default Teardown
+
+# disable headless mode for browser
+# set the variable BROWSER to chrome or firefox
+# *** Variables ***
+# ${BROWSER}    chrome
+
+*** Test Cases ***
 
 Scenario: As a member I want to be able to log into the website
-  [Documentation]  Example of a BDD-style (Behavior-driven development) test.
-  Given a login form
-   When I enter valid credentials
-   Then I am logged in
-
-
-*** Keywords *****************************************************************
-
-# --- Given ------------------------------------------------------------------
-
-a login form
-  Go To  ${PLONE_URL}/login_form
-  Wait until page contains  Login Name
-  Wait until page contains  Password
-
-
-# --- WHEN -------------------------------------------------------------------
-
-I enter valid credentials
-  Input Text  __ac_name  admin
-  Input Text  __ac_password  secret
-  Click Button  Log in
-
-
-# --- THEN -------------------------------------------------------------------
-
-I am logged in
-  Wait until page contains  You are now logged in
-  Page should contain  You are now logged in
+    Given a login form
+     When I enter valid credentials
+     Then I am logged in

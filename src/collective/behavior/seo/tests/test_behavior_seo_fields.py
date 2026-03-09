@@ -1,7 +1,5 @@
 from collective.behavior.seo.interfaces import ISEOFieldsMarker
-from collective.behavior.seo.testing import (  # noqa
-    COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING,
-)
+from collective.behavior.seo.testing import COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.behavior.interfaces import IBehavior

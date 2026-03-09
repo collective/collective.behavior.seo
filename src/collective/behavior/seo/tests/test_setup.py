@@ -1,18 +1,12 @@
 """Setup tests for this package."""
-from collective.behavior.seo.testing import (  # noqa
-    COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING,
-)
+
+from collective.behavior.seo.testing import COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.base.utils import get_installer
 
 import unittest
-
-
-try:
-    from plone.base.utils import get_installer
-except ImportError:
-    from Products.CMFPlone.utils import get_installer
 
 
 class TestSetup(unittest.TestCase):

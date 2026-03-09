@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <registry>
-    <records interface="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoSettings"
-             remove="True">
+  <records interface="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoSettings"
+           remove="True"
+  >
     </records>
 </registry>
-

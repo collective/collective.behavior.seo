@@ -1,21 +1,25 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:plone="http://namespaces.plone.org/plone"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  i18n_domain="collective.behavior.seo">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.behavior.seo"
+    >
 
-    <include package="plone.behavior" file="meta.zcml"/>
+  <include
+      package="plone.behavior"
+      file="meta.zcml"
+      />
 
-    <!-- -*- extra stuff goes here -*- -->
+  <!-- -*- extra stuff goes here -*- -->
 
-    <plone:behavior
-        name="collective.behavior.seo.seo_fields"
-        title="SEO Fields"
-        description="This behavior adds extra fields to a Content Type for SEO optimisation"
-        provides=".seo_fields.ISEOFields"
-        factory=".seo_fields.SEOFields"
-        marker="..interfaces.ISEOFieldsMarker"
-        />
+  <plone:behavior
+      name="collective.behavior.seo.seo_fields"
+      title="SEO Fields"
+      description="This behavior adds extra fields to a Content Type for SEO optimisation"
+      factory=".seo_fields.SEOFields"
+      provides=".seo_fields.ISEOFields"
+      marker="..interfaces.ISEOFieldsMarker"
+      />
 
 </configure>
