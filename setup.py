@@ -72,4 +72,8 @@ setup(
             "zest.pocompile",
         ],
     },
+    entry_points="""
+    [plone.autoinclude.plugin]
+    target = plone
+    """,
 )
