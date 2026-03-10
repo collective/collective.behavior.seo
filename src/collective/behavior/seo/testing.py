@@ -1,4 +1,3 @@
-from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
@@ -35,14 +34,4 @@ COLLECTIVE_BEHAVIOR_SEO_INTEGRATION_TESTING = IntegrationTesting(
 COLLECTIVE_BEHAVIOR_SEO_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_BEHAVIOR_SEO_FIXTURE, WSGI_SERVER_FIXTURE),
     name="CollectiveBehaviorSeoLayer:FunctionalTesting",
-)
-
-
-COLLECTIVE_BEHAVIOR_SEO_ACCEPTANCE_TESTING = FunctionalTesting(
-    bases=(
-        COLLECTIVE_BEHAVIOR_SEO_FIXTURE,
-        REMOTE_LIBRARY_BUNDLE_FIXTURE,
-        WSGI_SERVER_FIXTURE,
-    ),
-    name="CollectiveBehaviorSeoLayer:AcceptanceTesting",
 )

@@ -64,7 +64,6 @@ setup(
     extras_require={
         "test": [
             "plone.app.testing",
-            "plone.app.robotframework[debug]",
             "plone.browserlayer",
             "plone.testing>=5.0.0",
             "zest.releaser[recommended]",
