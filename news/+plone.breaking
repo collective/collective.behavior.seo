@@ -1,3 +1,0 @@
-Make package Plone 6.2 ready.  Use native namespaces.
-Still works on Plone 6.0 and 6.1, but due to the native namespaces it could conflict with other `collective` packages.
-[1letter]

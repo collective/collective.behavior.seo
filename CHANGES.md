@@ -9,6 +9,14 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0 (2026-03-10)
+
+
+### Breaking changes
+
+- Make package Plone 6.2 ready.  Use native namespaces.
+  Still works on Plone 6.0 and 6.1, but due to the native namespaces it could conflict with other `collective` packages.
+  [1letter] 
 
 ## 2.0.2 (unreleased)
 

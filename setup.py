@@ -13,7 +13,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.behavior.seo",
-    version="3.0.0.dev0",
+    version="3.0.0",
     description="An add-on for Plone",
     long_description=long_description,
     long_description_content_type="text/markdown",
