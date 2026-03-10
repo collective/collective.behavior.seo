@@ -67,7 +67,6 @@ setup(
             "plone.app.robotframework[debug]",
             "plone.browserlayer",
             "plone.testing>=5.0.0",
-            "robotsuite",
             "zest.releaser[recommended]",
             "zestreleaser.towncrier",
             "zest.pocompile",
