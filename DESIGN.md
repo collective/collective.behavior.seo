@@ -1,5 +1,4 @@
-Design decisions
-================
+# Design decisions
 
 As with every software project, Plone add'ons have many design decisions which are trade offs between complexity, end
 user friendliness, webmaster/integrator flexibility and configurations, etc.etc. If you wonder "Why didn't they ..."
@@ -12,7 +11,7 @@ pick and choose from individual tags mentioned in robots documentation. We even 
 Plone 5.1 with look-ahead typing.
 
 Problem is: most content editors don't know exactly which fields do what, editors will have to multiple click their
-selection togeter, robot tags can get outdated (a few from sc.seo were not best practice anymore). It depends on your
+selection together, robot tags can get outdated (a few from sc.seo were not best practice anymore). It depends on your
 audience, but the webmaster can now create sets of tags for every individual site. And there are probably 3 - 6  sane
 combinations, which are easy to select by content editors.
 

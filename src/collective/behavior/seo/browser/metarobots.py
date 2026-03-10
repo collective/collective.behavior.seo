@@ -3,7 +3,6 @@ from plone.app.layout.viewlets import common
 
 import logging
 
-
 logger = logging.getLogger("collective.behavior.seo")
 
 # Code mostly reused from https://github.com/simplesconsultoria/sc.seo
@@ -26,7 +25,7 @@ class MetaRobotsViewlet(common.ViewletBase):
 
     def content(self):
         content = self.behavior.seo_robots
-        # If there is no restriction, we explicity allow indexing
+        # If there is no restriction, we explicitly allow indexing
         if not content:
             return "all"
         return content

@@ -1,7 +1,7 @@
-Contributors
-============
+# Contributors
 
 - Zest Software, info@zestsoftware.nl
+- 1letter
 
 This add'on is a combination of several SEO add'ons and improvements for Plone 5.1:
 
