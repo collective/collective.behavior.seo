@@ -43,7 +43,7 @@ class BaseViewletIntegrationTest(unittest.TestCase):
 
 class MetaFieldsViewletIntegrationTest(BaseViewletIntegrationTest):
 
-    def test_viewlet(self):
+    def test_viewlet_contenttype_with_seo_behavior(self):
 
         from collective.behavior.seo.browser.metafields import MetaFieldsViewlet
 
@@ -70,6 +70,18 @@ class MetaFieldsViewletIntegrationTest(BaseViewletIntegrationTest):
         self.assertTrue(
             viewlet.metatags == [("description", "Another seo description")]
         )
+
+    def test_viewlet_contenttype_without_seo_behavior(self):
+
+        from collective.behavior.seo.browser.metafields import MetaFieldsViewlet
+
+        self._invalidateRequestMemoizations()
+
+        self.app.REQUEST["ACTUAL_URL"] = self.news.absolute_url()
+
+        viewlet = MetaFieldsViewlet(self.news, self.app.REQUEST, None)
+        viewlet.update()
+        self.assertTrue(list(viewlet.metatags) == [("description", "a description")])
 
 
 class MetaRobotsViewletIntegrationTest(BaseViewletIntegrationTest):
@@ -113,7 +125,7 @@ class MetaRobotsViewletIntegrationTest(BaseViewletIntegrationTest):
 
 class TitleViewletIntegrationTest(BaseViewletIntegrationTest):
 
-    def test_viewlet(self):
+    def test_viewlet_contenttype_with_seo_behavior(self):
 
         from collective.behavior.seo.browser.title import TitleViewlet
 
@@ -132,3 +144,15 @@ class TitleViewletIntegrationTest(BaseViewletIntegrationTest):
         self._invalidateRequestMemoizations()
         viewlet.update()
         self.assertTrue(viewlet.site_title == "Big &amp; Bäng")
+
+    def test_viewlet_contenttype_without_seo_behavior(self):
+
+        from collective.behavior.seo.browser.title import TitleViewlet
+
+        self._invalidateRequestMemoizations()
+
+        self.app.REQUEST["ACTUAL_URL"] = self.news.absolute_url()
+
+        viewlet = TitleViewlet(self.news, self.app.REQUEST, None)
+        viewlet.update()
+        self.assertTrue(viewlet.site_title == "News Item &mdash; Plone site")
