@@ -10,6 +10,8 @@ class TitleViewlet(common.TitleViewlet):
     def update(self):
         super().update()
 
-        if ISEOFieldsMarker.providedBy(self.context):
-            if self.context.seo_title:
-                self.site_title = escape(safe_text(self.context.seo_title))
+        if not ISEOFieldsMarker.providedBy(self.context):
+            return
+
+        if self.context.seo_title:
+            self.site_title = escape(safe_text(self.context.seo_title))
