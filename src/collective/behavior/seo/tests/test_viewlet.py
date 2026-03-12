@@ -87,6 +87,14 @@ class MetaRobotsViewletIntegrationTest(BaseViewletIntegrationTest):
 
         self.assertTrue(viewlet.behavior is not None)
         self.assertTrue(viewlet.available())
+        self.assertTrue(viewlet.content() == "all")
+
+        adapter = SEOFields(self.page)
+        adapter.seo_robots = "index, follow"
+
+        viewlet = MetaRobotsViewlet(self.page, self.app.REQUEST, None)
+        viewlet.update()
+        self.assertTrue(viewlet.content() == "index, follow")
 
     def test_viewlet_contenttype_without_seo_behavior(self):
 
@@ -101,3 +109,26 @@ class MetaRobotsViewletIntegrationTest(BaseViewletIntegrationTest):
 
         self.assertTrue(viewlet.behavior is None)
         self.assertTrue(viewlet.available() is False)
+
+
+class TitleViewletIntegrationTest(BaseViewletIntegrationTest):
+
+    def test_viewlet(self):
+
+        from collective.behavior.seo.browser.title import TitleViewlet
+
+        self._invalidateRequestMemoizations()
+
+        self.app.REQUEST["ACTUAL_URL"] = self.page.absolute_url()
+
+        viewlet = TitleViewlet(self.page, self.app.REQUEST, None)
+        viewlet.update()
+        self.assertTrue(viewlet.site_title == "Test default page &mdash; Plone site")
+
+        # now we set the seo title
+        adapter = SEOFields(self.page)
+        adapter.seo_title = "Big & Bäng"
+
+        self._invalidateRequestMemoizations()
+        viewlet.update()
+        self.assertTrue(viewlet.site_title == "Big &amp; Bäng")
