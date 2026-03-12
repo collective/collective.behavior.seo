@@ -20,6 +20,7 @@ class CollectiveBehaviorSeoLayer(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "collective.behavior.seo:default")
+        applyProfile(portal, "collective.behavior.seo:testing")
 
 
 COLLECTIVE_BEHAVIOR_SEO_FIXTURE = CollectiveBehaviorSeoLayer()
