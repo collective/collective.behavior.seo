@@ -69,6 +69,7 @@ setup(
             "zest.releaser[recommended]",
             "zestreleaser.towncrier",
             "zest.pocompile",
+            "zope.testrunner",
         ],
     },
     entry_points="""
