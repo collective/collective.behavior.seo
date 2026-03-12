@@ -1,10 +1,6 @@
 from ..interfaces import ISEOFieldsMarker
 from plone.app.layout.viewlets import common
 
-import logging
-
-logger = logging.getLogger("collective.behavior.seo")
-
 # Code mostly reused from https://github.com/simplesconsultoria/sc.seo
 
 

@@ -7,7 +7,7 @@ commit-id = "2.5.1"
 
 
 [pyproject]
-dependencies_ignores = "['zest.pocompile','zestreleaser.towncrier', 'zest.releaser',]"
+dependencies_ignores = "['zest.pocompile','zestreleaser.towncrier', 'zest.releaser', 'zope.testrunner']"
 
 
 [tox]

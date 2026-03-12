@@ -16,10 +16,14 @@ class RobotsVocabulary:
             interface=ICollectiveBehaviorSeoSettings,
             default="index, follow",
         )
+
         # Watch out for duplicates, likely multiple blank lines.
         added = set()
         for tag in tags:
+            tag = tag.strip()
             if not tag:
+                continue
+            if len(tag.split(",")) != 2:
                 continue
             if tag in added:
                 continue
