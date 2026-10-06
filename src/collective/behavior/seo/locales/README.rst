@@ -1,21 +1,12 @@
 Adding and updating locales
 ---------------------------
 
-For every language you want to translate into you need a
-locales/[language]/LC_MESSAGES/collective.task.po
-(e.g. locales/de/LC_MESSAGES/collective.task.po)
-
-For German
 
 .. code-block:: console
 
-    $ mkdir de
+    $ uvx i18ndude rebuild-pot --pot ./src/collective/behavior/seo/locales/collective.behavior.seo.pot --create collective.behavior.seo ./src/collective/behavior/seo
+    $ uvx i18ndude sync --pot ./src/collective/behavior/seo/locales/collective.behavior.seo.pot ./src/collective/behavior/seo/locales/*/LC_MESSAGES/collective.behavior.seo.po
 
-For updating locales
-
-.. code-block:: console
-
-    $ ./bin/update_locale
 
 Note
 ----
