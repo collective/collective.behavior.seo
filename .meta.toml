@@ -6,6 +6,12 @@ template = "default"
 commit-id = "2.11.1"
 
 
+[gitignore]
+extra_lines = """
+.venv
+"""
+
+
 [pyproject]
 dependencies_ignores = "['zest.pocompile','zestreleaser.towncrier', 'zest.releaser', 'zope.testrunner']"
 
