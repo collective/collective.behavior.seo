@@ -1,9 +1,9 @@
 # Generated from:
-# https://github.com/plone/meta/tree/main/src/plone/meta/default
+# https://github.com/plone/meta/tree/2.x/src/plone/meta/default
 # See the inline comments on how to expand/tweak this configuration file
 [meta]
 template = "default"
-commit-id = "2.5.1"
+commit-id = "2.11.1"
 
 
 [pyproject]
@@ -11,6 +11,7 @@ dependencies_ignores = "['zest.pocompile','zestreleaser.towncrier', 'zest.releas
 
 
 [tox]
+test_matrix = { "6.2" = ["3.10", "3.11", "3.12", "3.13", "3.14"] }
 extra_lines = """
 [coverage:run]
 omit =
