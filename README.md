@@ -24,6 +24,8 @@ Two Options to provide `Structured Data` in the Website.
 
 **You can use both options together, the result in the Viewlet will then be concatenated.**
 
+If the behavior is not enabled for a Contenttype, but an adapter is registered, then the viewlet will be rendered.
+
 1. use the field in the seo tab
 
 2. register an adapter
