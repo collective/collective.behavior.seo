@@ -21,7 +21,7 @@ test_matrix = { "6.2" = ["3.10", "3.11", "3.12", "3.13", "3.14"] }
 extra_lines = """
 [coverage:run]
 omit =
-    */test*
+    */tests/*
     */upgrades/*
     */locales/*
 """
