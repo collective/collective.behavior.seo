@@ -53,6 +53,7 @@ setup(
         "plone.base",
         "plone.behavior",
         "plone.dexterity",
+        "plone.memoize",
         "plone.schema",
         "plone.supermodel",
         "zope.component",
@@ -63,9 +64,12 @@ setup(
     ],
     extras_require={
         "test": [
+            "lxml",
+            "plone.app.contenttypes",
             "plone.app.testing",
             "plone.browserlayer",
             "plone.testing>=5.0.0",
+            "transaction",
             "zest.releaser[recommended]",
             "zestreleaser.towncrier",
             "zest.pocompile",
