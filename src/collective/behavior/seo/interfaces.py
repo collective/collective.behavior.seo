@@ -33,3 +33,10 @@ class ICollectiveBehaviorSeoSettings(Interface):
         value_type=schema.TextLine(),
         default=("index, nofollow", "noindex, follow", "index, follow"),
     )
+
+
+class ICollectiveSeoStructuredDataAdapter(Interface):
+    """Adapter interface for retrieving extra data for json ld."""
+
+    def get_data():
+        """Return JSON data, should be valid json by https://schema.org"""
