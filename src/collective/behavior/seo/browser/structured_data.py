@@ -1,8 +1,7 @@
-from collective.behavior.seo.behaviors.seo_fields import SEOFields
+from collective.behavior.seo.behaviors.seo_fields import ISEOFields
 from collective.behavior.seo.interfaces import ICollectiveSeoStructuredDataAdapter
-from collective.behavior.seo.interfaces import ISEOFieldsMarker
 from plone.app.layout.viewlets.common import ViewletBase
-from plone.memoize.view import memoize
+from plone.memoize.instance import memoizedproperty
 from zope.component import getAdapters
 
 import json
@@ -13,20 +12,21 @@ class StructuredDataViewlet(ViewletBase):
 
     """ the use of this decorator is this a right approach?"""
 
-    @property
-    @memoize
+    @memoizedproperty
     def structured_data(self):
-        adapter = SEOFields(self.context)
+        adapter = ISEOFields(self.context, None)
 
         seo_structured_data = []
 
-        adapter_data = adapter.seo_structured_data
+        if adapter:
 
-        if isinstance(adapter_data, dict):
-            seo_structured_data.append(adapter_data)
+            adapter_data = adapter.seo_structured_data
 
-        elif isinstance(adapter_data, list):
-            seo_structured_data = adapter_data.copy()
+            if isinstance(adapter_data, dict):
+                seo_structured_data.append(adapter_data)
+
+            elif isinstance(adapter_data, list):
+                seo_structured_data = adapter_data.copy()
 
         # resolve adapters
         # add externally defined extra json/ld schema data
@@ -36,7 +36,10 @@ class StructuredDataViewlet(ViewletBase):
 
         for name, seo_adapter in seo_adapters:
 
-            extra_data = seo_adapter.get_data() or []
+            try:
+                extra_data = seo_adapter.get_data() or []
+            except (TypeError, KeyError, AttributeError):
+                extra_data = []
 
             if not extra_data:
                 # no data via adapter
@@ -55,14 +58,14 @@ class StructuredDataViewlet(ViewletBase):
         if not seo_structured_data:
             return ""
 
-        return json.dumps(seo_structured_data)
+        escaped_json = (
+            json.dumps(seo_structured_data)
+            .replace("<", "\\u003c")
+            .replace(">", "\\u003e")
+            .replace("&", "\\u0026")
+        )
 
-    def update(self):
-        super().update()
-        try:
-            self.behavior = ISEOFieldsMarker(self.context)
-        except TypeError:
-            self.behavior = None
+        return escaped_json
 
     def available(self):
-        return bool(self.behavior is not None and self.structured_data)
+        return bool(self.structured_data)
