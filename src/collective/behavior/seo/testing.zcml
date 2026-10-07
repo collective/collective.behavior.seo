@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.behavior.seo"
+    >
+
+  <include file="configure.zcml" />
+
+  <!-- Adapter for a Document - inject JSON LD-->
+  <adapter
+      factory="collective.behavior.seo.tests.CustomStructuredDataVariant1"
+      for="plone.app.contenttypes.interfaces.IDocument
+           collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+      name="json-ld-variant1"
+      />
+
+  <!-- Adapter for a Folder - inject JSON LD-->
+  <adapter
+      factory="collective.behavior.seo.tests.CustomStructuredDataVariant2"
+      for="plone.app.contenttypes.interfaces.IFolder
+           collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+      name="json-ld-variant2"
+      />
+
+
+
+</configure>
