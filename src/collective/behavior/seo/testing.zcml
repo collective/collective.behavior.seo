@@ -24,6 +24,14 @@
       name="json-ld-variant2"
       />
 
+  <!-- a broken Adapter for a Dummy Contenttype - inject JSON LD-->
+  <adapter
+      factory="collective.behavior.seo.tests.CustomStructuredDataVariant3"
+      for="collective.behavior.seo.tests.IDummyContent
+           collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+      name="json-ld-variant3"
+      />
+
 
 
 </configure>

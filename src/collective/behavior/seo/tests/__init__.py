@@ -1,5 +1,6 @@
 from collective.behavior.seo.interfaces import ICollectiveSeoStructuredDataAdapter
 from zope.interface import implementer
+from zope.interface import Interface
 
 TEST_SCHEMA_JSON_LD_LIST = [
     {
@@ -20,7 +21,7 @@ TEST_SCHEMA_JSON_LD_OBJECT = {
     "name": "John Doe",
     "sponsor": {
         "@type": "Organization",
-        "name": "Plone",
+        "name": "Plone < & > Plone",
         "url": "http://plone.org",
     },
 }
@@ -71,3 +72,24 @@ class CustomStructuredDataVariant2:
 
     def get_data(self):
         return TEST_ADAPTER_SCHEMA_JSON_LD_VARIANT2
+
+
+@implementer(ICollectiveSeoStructuredDataAdapter)
+class CustomStructuredDataVariant3:
+    """Additional structured data adapter."""
+
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+    def get_data(self):
+        dummy = 1
+        # this raise an error
+        return dummy.test
+
+
+class IDummyContent(Interface):
+    """Adapter interface for retrieving extra data for json ld."""
+
+    def get_data():
+        """Return JSON data, should be valid json by https://schema.org"""

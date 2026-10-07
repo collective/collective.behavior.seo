@@ -99,12 +99,6 @@ class BaseViewletWithAdapterIntegrationTest(unittest.TestCase):
 
         self.folder = self.portal.folder
 
-    def _invalidateRequestMemoizations(self):
-        try:
-            del self.app.REQUEST.__annotations__
-        except AttributeError:
-            pass
-
 
 class MetaFieldsViewletIntegrationTest(BaseViewletIntegrationTest):
 
@@ -231,12 +225,10 @@ class StructuredDataViewletIntegrationTest(BaseViewletIntegrationTest):
             StructuredDataViewlet,
         )
 
-        self._invalidateRequestMemoizations()
-
         self.app.REQUEST["ACTUAL_URL"] = self.page.absolute_url()
 
         viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
-        viewlet.update()
+
         self.assertTrue(viewlet.structured_data == "")
 
         # now we set the seo structured data
@@ -245,16 +237,16 @@ class StructuredDataViewletIntegrationTest(BaseViewletIntegrationTest):
         adapter = SEOFields(self.page)
         adapter.seo_structured_data = TEST_SCHEMA_JSON_LD_OBJECT
 
-        self._invalidateRequestMemoizations()
-        viewlet.update()
+        viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
+
         self.assertTrue("John Doe" in viewlet.structured_data)
 
         # second a json list of objects
         adapter = SEOFields(self.page)
         adapter.seo_structured_data = TEST_SCHEMA_JSON_LD_LIST
 
-        self._invalidateRequestMemoizations()
-        viewlet.update()
+        viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
+
         self.assertTrue("Jane Doe" in viewlet.structured_data)
 
     def test_viewlet_contenttype_without_seo_behavior(self):
@@ -263,15 +255,32 @@ class StructuredDataViewletIntegrationTest(BaseViewletIntegrationTest):
             StructuredDataViewlet,
         )
 
-        self._invalidateRequestMemoizations()
-
         self.app.REQUEST["ACTUAL_URL"] = self.news.absolute_url()
 
         viewlet = StructuredDataViewlet(self.news, self.app.REQUEST, None)
-        viewlet.update()
 
-        self.assertTrue(viewlet.behavior is None)
-        self.assertTrue(viewlet.available() is False)
+        self.assertFalse(viewlet.available())
+
+    def test_viewlet_json_escape(self):
+
+        from collective.behavior.seo.browser.structured_data import (
+            StructuredDataViewlet,
+        )
+
+        self.app.REQUEST["ACTUAL_URL"] = self.page.absolute_url()
+
+        viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
+
+        self.assertTrue(viewlet.structured_data == "")
+
+        # now we set the seo structured data
+
+        # first a json object
+        adapter = SEOFields(self.page)
+        adapter.seo_structured_data = TEST_SCHEMA_JSON_LD_OBJECT
+
+        viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
+        self.assertTrue("\\u003c \\u0026 \\u003e" in viewlet.structured_data)
 
 
 class StructuredDataViewletWithAdapterIntegrationTest(
@@ -286,13 +295,28 @@ class StructuredDataViewletWithAdapterIntegrationTest(
 
         # test injected structured data via adapter "json-ld-variant1"
         viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
-        viewlet.update()
         self.assertTrue("Plone Foundation" in viewlet.structured_data)
 
         # test inject structured data via adapter "json-ld-variant2"
         viewlet = StructuredDataViewlet(self.folder, self.app.REQUEST, None)
-        viewlet.update()
         self.assertTrue("Plone Team" in viewlet.structured_data)
+
+    def test_viewlet_broken_adapter_resolution(self):
+
+        from collective.behavior.seo.browser.structured_data import (
+            StructuredDataViewlet,
+        )
+        from collective.behavior.seo.tests import IDummyContent
+        from zope.interface import alsoProvides
+
+        alsoProvides(self.page, IDummyContent)
+
+        # test injected structured data via adapter "json-ld-variant1"
+
+        # test injected structured data via adapter "json-ld-variant3"
+        # the adapter is broken, but the viewlet should be rendered
+        viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
+        self.assertTrue("Plone Foundation" in viewlet.structured_data)
 
     def test_viewlet_adapter_resolution_and_behavior_field(self):
 
@@ -305,8 +329,6 @@ class StructuredDataViewletWithAdapterIntegrationTest(
         adapter.seo_structured_data = TEST_SCHEMA_JSON_LD_LIST
 
         viewlet = StructuredDataViewlet(self.page, self.app.REQUEST, None)
-        self._invalidateRequestMemoizations()
-        viewlet.update()
 
         # data from seo field
         self.assertTrue("Jane Doe" in viewlet.structured_data)
