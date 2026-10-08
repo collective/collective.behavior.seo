@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-09-18 12:51+0000\n"
+"POT-Creation-Date: 2026-10-07 05:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,70 +17,83 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.behavior.seo\n"
 
-#: ../controlpanel/controlpanel.py:9
+#: collective/behavior/seo/controlpanel/controlpanel.py:9
 msgid "Collective Behavior SEO settings"
 msgstr ""
 
-#: ../configure.zcml:26
+#: collective/behavior/seo/profiles.zcml:16
 msgid "Installs the collective.behavior.seo add-on."
 msgstr ""
 
-#: ../behaviors/seo_fields.py:46
+#: collective/behavior/seo/behaviors/seo_fields.py:47
 msgid "Metatag Robots"
 msgstr ""
 
-#: ../interfaces.py:22
+#: collective/behavior/seo/interfaces.py:22
 msgid "Robot Tags"
 msgstr ""
 
-#: ../behaviors/seo_fields.py:17
+#: collective/behavior/seo/behaviors/seo_fields.py:18
 msgid "SEO"
 msgstr ""
 
-#: ../behaviors/seo_fields.py:34
+#: collective/behavior/seo/behaviors/seo_fields.py:35
 msgid "SEO Description"
 msgstr ""
 
-#: ../behaviors/configure.zcml:19
+#: collective/behavior/seo/behaviors/configure.zcml:23
 msgid "SEO Fields"
 msgstr ""
 
-#: ../behaviors/seo_fields.py:22
+#: collective/behavior/seo/behaviors/seo_fields.py:23
 msgid "SEO Title"
 msgstr ""
 
-#: ../behaviors/configure.zcml:19
+#: collective/behavior/seo/behaviors/seo_fields.py:66
+msgid "Structured Data"
+msgstr ""
+
+#: collective/behavior/seo/behaviors/configure.zcml:23
 msgid "This behavior adds extra fields to a Content Type for SEO optimisation"
 msgstr ""
 
-#: ../configure.zcml:35
+#: collective/behavior/seo/profiles.zcml:33
 msgid "Uninstalls the collective.behavior.seo add-on."
 msgstr ""
 
-#: ../configure.zcml:26
+#: collective/behavior/seo/profiles.zcml:16
 msgid "collective.behavior.seo"
 msgstr ""
 
-#: ../configure.zcml:35
+#: collective/behavior/seo/profiles.zcml:24
+msgid "collective.behavior.seo (testing)"
+msgstr ""
+
+#: collective/behavior/seo/profiles.zcml:33
 msgid "collective.behavior.seo (uninstall)"
 msgstr ""
 
 #. Default: "Enter combinations of robot tags, separated by comma's one combination on every line. The idea here is that the webmaster decides which combinations of multiple tags are sane, so that content editors don't need to compose logical combinations themselves from all individual tags."
-#: ../interfaces.py:23
+#: collective/behavior/seo/interfaces.py:23
 msgid "robot_tags_desc"
 msgstr ""
 
 #. Default: "Used as meta description field in the 'head' section of a page instead of the default description."
-#: ../behaviors/seo_fields.py:35
+#: collective/behavior/seo/behaviors/seo_fields.py:36
 msgid "seo_description_help"
 msgstr ""
 
 #. Default: "Select options that hint search engines how to treat this content. Typically listings are to navigate the site, but add little to no value in its own and should be set to 'noindex, follow'. In some cases you want a listing to be indexed. E.g. when publishing a Top 10 recipes list with extra content above and below the list, in which case you would use 'index,follow'."
-#: ../behaviors/seo_fields.py:47
+#: collective/behavior/seo/behaviors/seo_fields.py:48
 msgid "seo_robots_help"
 msgstr ""
 
+#. Default: "Structured data helps search engines to better understand websites. A semantic annotation makes it possible to establish new meanings/contexts, and automatically read information, and transfer it to other forms. Google, by far the most used search engine, bases itself on structured data with the aim of providing users with rich search results and other such SERP elements. The advantage to the website operator is these sorts of search results greatly increase the visibility and are much more likely to get the attention of potential customers."
+#: collective/behavior/seo/behaviors/seo_fields.py:67
+msgid "seo_structured_data_help"
+msgstr ""
+
 #. Default: "Used in the web page 'head' section title and browser tab instead of the default title."
-#: ../behaviors/seo_fields.py:23
+#: collective/behavior/seo/behaviors/seo_fields.py:24
 msgid "seo_title_help"
 msgstr ""

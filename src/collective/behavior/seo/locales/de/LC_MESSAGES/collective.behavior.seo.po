@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-09-18 12:51+0000\n"
+"POT-Creation-Date: 2026-10-07 05:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,70 +14,83 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../controlpanel/controlpanel.py:9
+#: collective/behavior/seo/controlpanel/controlpanel.py:9
 msgid "Collective Behavior SEO settings"
 msgstr "Einstellungen Collective Behavior SEO"
 
-#: ../configure.zcml:26
+#: collective/behavior/seo/profiles.zcml:16
 msgid "Installs the collective.behavior.seo add-on."
 msgstr "Installiert collective.behavior.seo Erweiterung"
 
-#: ../behaviors/seo_fields.py:46
+#: collective/behavior/seo/behaviors/seo_fields.py:47
 msgid "Metatag Robots"
 msgstr "Metatag Robots"
 
-#: ../interfaces.py:22
+#: collective/behavior/seo/interfaces.py:22
 msgid "Robot Tags"
 msgstr "Robot Tags"
 
-#: ../behaviors/seo_fields.py:17
+#: collective/behavior/seo/behaviors/seo_fields.py:18
 msgid "SEO"
 msgstr "SEO"
 
-#: ../behaviors/seo_fields.py:34
+#: collective/behavior/seo/behaviors/seo_fields.py:35
 msgid "SEO Description"
 msgstr "SEO Beschreibung"
 
-#: ../behaviors/configure.zcml:19
+#: collective/behavior/seo/behaviors/configure.zcml:23
 msgid "SEO Fields"
 msgstr "SEO Felder"
 
-#: ../behaviors/seo_fields.py:22
+#: collective/behavior/seo/behaviors/seo_fields.py:23
 msgid "SEO Title"
 msgstr "SEO Titel"
 
-#: ../behaviors/configure.zcml:19
+#: collective/behavior/seo/behaviors/seo_fields.py:66
+msgid "Structured Data"
+msgstr "Strukturierte Daten"
+
+#: collective/behavior/seo/behaviors/configure.zcml:23
 msgid "This behavior adds extra fields to a Content Type for SEO optimisation"
 msgstr "Fügt einem Inhaltstyp zusätzliche Felder zur SEO-Optimierung hinzu"
 
-#: ../configure.zcml:35
+#: collective/behavior/seo/profiles.zcml:33
 msgid "Uninstalls the collective.behavior.seo add-on."
 msgstr "Deinstalliert collective.behavior.seo Erweiterung"
 
-#: ../configure.zcml:26
+#: collective/behavior/seo/profiles.zcml:16
 msgid "collective.behavior.seo"
 msgstr "collective.behavior.seo"
 
-#: ../configure.zcml:35
+#: collective/behavior/seo/profiles.zcml:24
+msgid "collective.behavior.seo (testing)"
+msgstr "collective.behavior.seo (testing)"
+
+#: collective/behavior/seo/profiles.zcml:33
 msgid "collective.behavior.seo (uninstall)"
 msgstr "collective.behavior.seo (uninstall)"
 
 #. Default: "Enter combinations of robot tags, separated by comma's one combination on every line. The idea here is that the webmaster decides which combinations of multiple tags are sane, so that content editors don't need to compose logical combinations themselves from all individual tags."
-#: ../interfaces.py:23
+#: collective/behavior/seo/interfaces.py:23
 msgid "robot_tags_desc"
 msgstr "Geben Sie Kombinationen von Robot-Tags ein, getrennt durch Kommas, eine Kombination in jeder Zeile. Die Idee dahinter ist, dass der Webmaster entscheidet, welche Kombinationen mehrerer Tags sinnvoll sind, so dass die Inhaltsredakteure nicht selbst logische Kombinationen aus allen einzelnen Tags zusammenstellen müssen."
 
 #. Default: "Used as meta description field in the 'head' section of a page instead of the default description."
-#: ../behaviors/seo_fields.py:35
+#: collective/behavior/seo/behaviors/seo_fields.py:36
 msgid "seo_description_help"
 msgstr "Wird als Meta-Beschreibungsfeld im 'Head'-Abschnitt einer Seite anstelle der Standardbeschreibung verwendet."
 
 #. Default: "Select options that hint search engines how to treat this content. Typically listings are to navigate the site, but add little to no value in its own and should be set to 'noindex, follow'. In some cases you want a listing to be indexed. E.g. when publishing a Top 10 recipes list with extra content above and below the list, in which case you would use 'index,follow'."
-#: ../behaviors/seo_fields.py:47
+#: collective/behavior/seo/behaviors/seo_fields.py:48
 msgid "seo_robots_help"
 msgstr "Wählen Sie Optionen aus, die den Suchmaschinen mitteilen, wie sie diesen Inhalt behandeln sollen. In der Regel dienen die Einträge der Navigation auf der Website, haben aber für sich genommen wenig bis gar keinen Wert und sollten auf 'noindex, follow' gesetzt werden. In manchen Fällen möchten Sie, dass ein Eintrag indiziert wird. Wenn Sie z. B. eine Top-10-Rezepte-Liste mit zusätzlichem Inhalt oberhalb und unterhalb der Liste veröffentlichen, würden Sie in diesem Fall 'index,follow' verwenden."
 
+#. Default: "Structured data helps search engines to better understand websites. A semantic annotation makes it possible to establish new meanings/contexts, and automatically read information, and transfer it to other forms. Google, by far the most used search engine, bases itself on structured data with the aim of providing users with rich search results and other such SERP elements. The advantage to the website operator is these sorts of search results greatly increase the visibility and are much more likely to get the attention of potential customers."
+#: collective/behavior/seo/behaviors/seo_fields.py:67
+msgid "seo_structured_data_help"
+msgstr "Strukturierte Daten helfen Suchmaschinen dabei, Websites besser zu verstehen. Eine semantische Annotation ermöglicht es, neue Bedeutungen und Zusammenhänge zu ermitteln, Informationen automatisch auszulesen und in andere Formate zu übertragen. Google, die mit Abstand meistgenutzte Suchmaschine, stützt sich auf strukturierte Daten, um Nutzern umfangreiche Suchergebnisse und andere derartige SERP-Elemente bereitzustellen. Der Vorteil für den Website-Betreiber besteht darin, dass diese Art von Suchergebnissen die Sichtbarkeit erheblich steigert und die Aufmerksamkeit potenzieller Kunden deutlich eher auf sich zieht."
+
 #. Default: "Used in the web page 'head' section title and browser tab instead of the default title."
-#: ../behaviors/seo_fields.py:23
+#: collective/behavior/seo/behaviors/seo_fields.py:24
 msgid "seo_title_help"
 msgstr "Wird im Titel des Abschnitts 'Head' der Webseite und im Browser-Tab anstelle des Standardtitels verwendet."

@@ -5,7 +5,6 @@
     i18n_domain="collective.behavior.seo"
     >
 
-
   <browser:viewlet
       name="plone.htmlhead.title"
       manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
@@ -21,11 +20,21 @@
       permission="zope2.View"
       layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
       />
+
   <browser:viewlet
       name="collective.behavior.seo.metarobots"
       manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
       class=".metarobots.MetaRobotsViewlet"
       template="metarobots.pt"
+      permission="zope2.View"
+      layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
+      />
+
+  <browser:viewlet
+      name="collective.behavior.seo.structured_data"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      class=".structured_data.StructuredDataViewlet"
+      template="structured_data.pt"
       permission="zope2.View"
       layer="collective.behavior.seo.interfaces.ICollectiveBehaviorSeoLayer"
       />

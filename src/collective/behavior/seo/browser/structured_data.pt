@@ -1,0 +1,5 @@
+<tal:snippet tal:condition="view/available">
+  <script type="application/ld+json"
+          tal:content="python:view.structured_data"
+  ></script>
+</tal:snippet>
