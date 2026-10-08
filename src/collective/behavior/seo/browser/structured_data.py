@@ -1,3 +1,4 @@
+from collective.behavior.seo import logger
 from collective.behavior.seo.behaviors.seo_fields import ISEOFields
 from collective.behavior.seo.interfaces import ICollectiveSeoStructuredDataAdapter
 from plone.app.layout.viewlets.common import ViewletBase
@@ -8,12 +9,12 @@ import json
 
 
 class StructuredDataViewlet(ViewletBase):
-    """Base viewlet to render content metadata as JSON-LD"""
-
-    """ the use of this decorator is this a right approach?"""
 
     @memoizedproperty
     def structured_data(self):
+
+        # logger = logging.getLogger("collective.behavior.seo")
+
         adapter = ISEOFields(self.context, None)
 
         seo_structured_data = []
@@ -38,8 +39,11 @@ class StructuredDataViewlet(ViewletBase):
 
             try:
                 extra_data = seo_adapter.get_data() or []
-            except (TypeError, KeyError, AttributeError):
+            except Exception as err:  # noqa: BLE001
                 extra_data = []
+                error_message = str(err)
+                error = f"Please check the specified adapter for structured data. Adaptername: {name} | {error_message}"
+                logger.error(error)
 
             if not extra_data:
                 # no data via adapter
