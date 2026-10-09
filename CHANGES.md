@@ -9,6 +9,30 @@
 
 <!-- towncrier release notes start -->
 
+## 3.1.0 (2026-10-09)
+
+
+### New features
+
+- add structured data field to behavior @1letter 
+
+
+### Internal
+
+- generate po files with uvx, remove `pkg_resources`
+
+  ```
+  $ uvx i18ndude rebuild-pot --pot ./src/collective/behavior/seo/locales/collective.behavior.seo.pot --create collective.behavior.seo ./src/collective/behavior/seo
+  $ uvx i18ndude sync --pot ./src/collective/behavior/seo/locales/collective.behavior.seo.pot ./src/collective/behavior/seo/locales/*/LC_MESSAGES/collective.behavior.seo.po
+  ```
+  @1letter 
+- update config with plone.meta @1letter 
+
+
+### Tests
+
+- add more tests, increase test coverage @1letter 
+
 ## 3.0.0 (2026-03-10)
 
 
