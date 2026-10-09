@@ -11,12 +11,16 @@ from zope.interface import provider
 
 @provider(IFormFieldProvider)
 class ISEOFields(model.Schema):
-    """ """
 
     model.fieldset(
         "seofields",
         label=_("SEO"),
-        fields=("seo_title", "seo_description", "seo_robots"),
+        fields=(
+            "seo_title",
+            "seo_description",
+            "seo_robots",
+            "seo_structured_data",
+        ),
     )
 
     seo_title = schema.TextLine(
