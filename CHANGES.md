@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 3.1.1 (2026-10-09)
+
+
+### Bug fixes
+
+- move `seo_structured_data` field to `seo` fieldset @1letter #21
+
 ## 3.1.0 (2026-10-09)
 
 
